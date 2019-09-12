@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Information</title>
+  </head>
+    
+<h1><u>User Information Here:</u></h1>
+  
+ <body>
+    <form>  
+        Full Name: 
+          <input type="text" name="fullName" placeholder="Enter Full Name" maxlength="100" required> <br>
+        Address 1:  
+        <input type="text" name="address1" placeholder="Enter Address 1" maxlength="100" required><br>
+        Address 2:
+        <input type="text" name="address2" placeholder="Enter Address 2" maxlength="100"><br>
+        City:
+        <input type="text" name="city" placeholder="Enter City" maxlength="100" required><br>
+        State:
+        <input list="stateDropDown" required><br>
+        <datalist id="stateDropDown">
+        <option value="State Place Holder"></datalist>
+        Zip Code:
+        <input type="text" name="zipCode" placeholder="Enter Zip Code" minlength=5 maxlength="9" required><br>
+        Phone Number:
+        <input type="text" name="phone" placeholder="Format: xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>  (format: xxx-xxx-xxxx)<br>
+        Email:
+        <input type="email" name="email" placeholder="Enter Email Address" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+      
+        
+  </body>
+</html>
