@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Shipping Information</h1>
+
+<form>
+	Shipping Address same as Physical Address:
+	<input type="radio" name="Shipping Adress same as Physical Adress" value="false" autocomplete="on"> <br>
+	<!-- need command to autofill the shipping address once radio button is selected. It will pull information from 'User Information' page or data from database-->
+
+	<br>
+	Address 1:
+	<input type="text" name="Address 1" maxlength="100"><br>
+
+	Address 2:
+	<input type="text" name="Address 2" maxlength="100"><br>
+
+	City:
+	<input type="text" name="City" maxlength="100">
+	&nbsp	&nbsp 	&nbsp <!--spaces between City and State Fields-->
+	State:
+	<input list= "States" name="States">
+	<!--Here is the dropdown menu for 'state' input. This is just for show for now until start AJAX part of project.-->
+	<datalist id="States">
+		<option value="AL">	<option value="AK">
+			<option value="AZ">	<option value="AR">
+		<option value="CA">	<option value="CO">
+		<option value="CT">
+		<option value="DE">	
+		<option value="FL">
+		<option value="GA">
+		<option value="HI">	
+		<option value="ID">	<option value="IL">	<option value="IN">
+			<option value="IA">
+		<option value="KS">	<option value="KY">
+		<option value="LA">
+		<option value="ME">	<option value="MD"><option value="MA">	
+			<option value="MI"><option value="MN"><option value="MS">
+			<option value="MO"><option value="MT">	
+		<option value="NE"><option value="NV">	<option value="NH">
+			<option value="NJ"><option value="NM">	<option value="NY">
+			<option value="NC">	<option value="ND">
+		<option value="OH">	<option value="OK">	<option value="OR">
+		<option value="PA">	
+		<option value="RI">
+		<option value="SC">	<option value="SD">
+		<option value="TN">	<option value="TX">	
+		<option value="UT">
+		<option value="VT"> <option value="VA">
+		<option value="WA">	<option value="WV">	<option value="WI">
+			<option value="WY">
+	</datalist><br>
+
+	Zip Code:
+	<input type="number" name="Zip" maxlength="9" minlength="5"><br>
+
+	<!--Submit button to check out link here -->
+	<input type="submit" value="Go to Checkout" formaction="link to Checkout">
+
+
+
+</form>
+</body>
+</html>
