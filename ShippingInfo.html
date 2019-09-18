@@ -7,19 +7,21 @@
 <form>
 	<label>Shipping Address same as Physical Address:</label>
 	<div class="switch-field">
-		<input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
 		<label for="radio-one">Yes</label>
-		<input type="radio" id="radio-two" name="switch-one" value="no" />
+		<input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
+
 		<label for="radio-two">No</label>
+		<input type="radio" id="radio-two" name="switch-one" value="no" />
 	</div>
-
+    
 	<br>
 	<br>
-	<label for = "address-1">Address 1</label>
-	<input id = "address-1" type="text" name="Address 1" placeholder = "123 Street" maxlength="100" required="" autocomplete="ship-address"><br>
 
-	<label for="address-2">Address 2</label>
-	<input id = "address-2" type="text" name="Address 2" placeholder = "Apt 1234" maxlength="100" autocomplete="ship-address2"><br>
+	<label for = "address-1">Address 1: Street Address</label>
+	<input id = "address-1" type="text" name="Address 1" placeholder = "2322 San Marcos Dr" maxlength="100" required="" autocomplete="ship-address"><br>
+
+	<label for="address-2">Address 2: Apt/Suite #</label>
+	<input id = "address-2" type="text" name="Address 2" placeholder = "Apt 194" maxlength="100" autocomplete="ship-address2"><br>
 
 	<label for ="city"> City</label>
 	<input id = "city" type="text" name="City" placeholder = "Austin" maxlength="100" required="" autocomplete="ship-city"><br>
@@ -58,7 +60,7 @@
 	</datalist><br>
 
 	<label for="zip">Postal Code</label>
-	<input id ="zip" type="number" name="Zip" placeholder ="12345"maxlength="9" minlength="5" required="" autocomplete="ship-zip"><br>
+	<input id ="zip" type="number" name="Zip" placeholder ="73629"maxlength="9" minlength="5" required="" autocomplete="ship-zip"><br>
 
 	<!--Submit button to check out link here formaction="link to Checkout"-->
 	<input type="submit" value="Go to Checkout" >
