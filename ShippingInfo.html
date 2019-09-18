@@ -5,22 +5,27 @@
 <h1>Shipping Information</h1>
 
 <form>
-	Shipping Address same as Physical Address:
-	<input type="radio" name="Shipping Adress same as Physical Adress" value="false" autocomplete="on"> <br>
-	<!-- need command to autofill the shipping address once radio button is selected. It will pull information from 'User Information' page or data from database-->
+	<label>Shipping Address same as Physical Address:</label>
+	<div class="switch-field">
+		<input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
+		<label for="radio-one">Yes</label>
+		<input type="radio" id="radio-two" name="switch-one" value="no" />
+		<label for="radio-two">No</label>
+	</div>
 
 	<br>
-	Address 1:
-	<input type="text" name="Address 1" maxlength="100"><br>
+	<br>
+	<label for = "address-1">Address 1</label>
+	<input id = "address-1" type="text" name="Address 1" placeholder = "123 Street" maxlength="100" required="" autocomplete="ship-address"><br>
 
-	Address 2:
-	<input type="text" name="Address 2" maxlength="100"><br>
+	<label for="address-2">Address 2</label>
+	<input id = "address-2" type="text" name="Address 2" placeholder = "Apt 1234" maxlength="100" autocomplete="ship-address2"><br>
 
-	City:
-	<input type="text" name="City" maxlength="100">
-	&nbsp	&nbsp 	&nbsp <!--spaces between City and State Fields-->
-	State:
-	<input list= "States" name="States">
+	<label for ="city"> City</label>
+	<input id = "city" type="text" name="City" placeholder = "Austin" maxlength="100" required="" autocomplete="ship-city"><br>
+
+	<label for = "state"> State</label>
+	<input id = "state" list= "States" name="States" required="" autocomplete="ship-state">
 	<!--Here is the dropdown menu for 'state' input. This is just for show for now until start AJAX part of project.-->
 	<datalist id="States">
 		<option value="AL">	<option value="AK">
@@ -52,11 +57,11 @@
 			<option value="WY">
 	</datalist><br>
 
-	Zip Code:
-	<input type="number" name="Zip" maxlength="9" minlength="5"><br>
+	<label for="zip">Postal Code</label>
+	<input id ="zip" type="number" name="Zip" placeholder ="12345"maxlength="9" minlength="5" required="" autocomplete="ship-zip"><br>
 
-	<!--Submit button to check out link here -->
-	<input type="submit" value="Go to Checkout" formaction="link to Checkout">
+	<!--Submit button to check out link here formaction="link to Checkout"-->
+	<input type="submit" value="Go to Checkout" >
 
 
 
