@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
   }
+
+  h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
   
   body {
     font-family: Arial, Helvetica, sans-serif;
@@ -26,7 +30,26 @@
   /* Style the list inside the menu */
   nav ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: rgb(146, 247, 220);
+  }
+
+  nav li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: rgb(37, 70, 179);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: rgb(255, 255, 255);
   }
   
   /* Style the content
@@ -39,17 +62,22 @@
   }
   */
   
-  /* Style the footer */
-  footer {
-    padding: 2px;
-    text-align: center;
-    color: white;
-  }
-  
   /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
   @media (max-width: 600px) {
     section {
       -webkit-flex-direction: row;
       flex-direction: row;
     }
+  }
+
+   /* Style the footer */
+   footer {
+    padding: 2px;
+    text-align: center;
+    color: white;
+  }
+
+  .iframe {
+    border: none;
+    height: 100%;
   }
