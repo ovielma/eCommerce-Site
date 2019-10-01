@@ -1,73 +1,59 @@
 <!DOCTYPE html>
 <html>
+
+<!-- link to main.css and shippingStyles.css -->
+<head>
+    <title>Shipping Information</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="shippingStyles.css">
+</head>
+
 <body>
-
-<h1>Shipping Information</h1>
-
-<form>
-	<label>Shipping Address same as Physical Address:</label>
-	<div class="switch-field">
-		<label for="radio-one">Yes</label>
-		<input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
-
-		<label for="radio-two">No</label>
-		<input type="radio" id="radio-two" name="switch-one" value="no" />
-	</div>
+    <h1>Shipping Information</h1>
+    <h2>Please fill out your shipping information below</h2>
     
-	<br>
-	<br>
+	<form>
+		<label>Shipping Address same as Physical Address:</label>
+		<!-- radio button to auto fill the form -->
+		<div class="switch-field">
+			<label for="radio-one">Yes</label>
+			<input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
 
-	<label for = "address-1">Address 1: Street Address</label>
-	<input id = "address-1" type="text" name="Address 1" placeholder = "2322 San Marcos Dr" maxlength="100" required="" autocomplete="ship-address"><br>
+			<label for="radio-two">No</label>
+			<input type="radio" id="radio-two" name="switch-one" value="no" />
+		</div>
+	    
+		<br>
+		<br>
+		<!-- Start of shipping form-->
+		<label for = "address-1">Address 1: Street Address</label>
+		<input id = "address-1" type="text" name="Address 1" placeholder = "2322 San Marcos Dr" maxlength="100" required="" autocomplete="ship-address"><br>
 
-	<label for="address-2">Address 2: Apt/Suite #</label>
-	<input id = "address-2" type="text" name="Address 2" placeholder = "Apt 194" maxlength="100" autocomplete="ship-address2"><br>
+		<label for="address-2">Address 2: Apt/Suite #</label>
+		<input id = "address-2" type="text" name="Address 2" placeholder = "Apt 194" maxlength="100" autocomplete="ship-address2"><br>
 
-	<label for ="city"> City</label>
-	<input id = "city" type="text" name="City" placeholder = "Austin" maxlength="100" required="" autocomplete="ship-city"><br>
+		<label for ="city"> City</label>
+		<input id = "city" type="text" name="City" placeholder = "Austin" maxlength="100" required="" autocomplete="ship-city"><br>
 
-	<label for = "state"> State</label>
-	<input id = "state" list= "States" name="States" required="" autocomplete="ship-state">
-	<!--Here is the dropdown menu for 'state' input. This is just for show for now until start AJAX part of project.-->
-	<datalist id="States">
-		<option value="AL">	<option value="AK">
-			<option value="AZ">	<option value="AR">
-		<option value="CA">	<option value="CO">
-		<option value="CT">
-		<option value="DE">	
-		<option value="FL">
-		<option value="GA">
-		<option value="HI">	
-		<option value="ID">	<option value="IL">	<option value="IN">
-			<option value="IA">
-		<option value="KS">	<option value="KY">
-		<option value="LA">
-		<option value="ME">	<option value="MD"><option value="MA">	
+		<label for = "state"> State</label>
+		<input id = "state" list= "States" name="States" required="" autocomplete="ship-state">
+		<!--Here is the dropdown menu for 'state' input. This is just for show for now until start AJAX part of project.-->
+		<datalist id="States">
+			<option value="AL"><option value="AK"><option value="AZ"> <option value="AR"><option value="CA"><option value="CO">	<option value="CT"><option value="DE"><option value="FL">
+			<option value="GA"><option value="HI"><option value="ID"> <option value="IL"><option value="IN"><option value="IA">
+			<option value="KS"><option value="KY"><option value="LA">
+			<option value="ME"><option value="MD"><option value="MA">
 			<option value="MI"><option value="MN"><option value="MS">
-			<option value="MO"><option value="MT">	
-		<option value="NE"><option value="NV">	<option value="NH">
-			<option value="NJ"><option value="NM">	<option value="NY">
-			<option value="NC">	<option value="ND">
-		<option value="OH">	<option value="OK">	<option value="OR">
-		<option value="PA">	
-		<option value="RI">
-		<option value="SC">	<option value="SD">
-		<option value="TN">	<option value="TX">	
-		<option value="UT">
-		<option value="VT"> <option value="VA">
-		<option value="WA">	<option value="WV">	<option value="WI">
-			<option value="WY">
-	</datalist><br>
+			<option value="MO"><option value="MT"><option value="NE"> <option value="NV"><option value="NH"><option value="NJ"> <option value="NM"><option value="NY"><option value="NC"> <option value="ND"><option value="OH"><option value="OK">	<option value="OR"><option value="PA"><option value="RI">
+			<option value="SC"><option value="SD"><option value="TN"> <option value="TX"><option value="UT"><option value="VT"> <option value="VA"><option value="WA"><option value="WV"> <option value="WI"><option value="WY">
+		</datalist><br>
 
-	<label for="zip">Postal Code</label>
-	<input id ="zip" type="number" name="Zip" placeholder ="73629"maxlength="9" minlength="5" required="" autocomplete="ship-zip"><br>
+		<label for="zip">Postal Code</label>
+		<input id ="zip" type="number" name="Zip" placeholder ="73629"maxlength="9" minlength="5" required="" autocomplete="ship-zip"><br>
 
-	<!--Submit button to check out link here formaction="link to Checkout"-->
-	<br>
-	<input type="submit" value="Go to Checkout" >
+		<!--Submit button to check out link here formaction="link to Checkout"-->
+		<input type="submit" value="Go to Checkout" formaction ="Checkout.html" >
+	</form> <!--end of form-->
 
-
-
-</form>
 </body>
 </html>
