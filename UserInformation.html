@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
+    
+    <!-- link to main.css and shippingStyles.css -->
+<head>
     <meta charset="utf-8">
     <title>User Information</title>
-  </head>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="UserInformationStyles.css">
+</head>
     
-<h1><u>User Information Here:</u></h1>
+<h1>User Information</h1>
   
  <body>
+   <img src="users.jpg.jpg" alt="Users">
     <form>  
         Full Name: 
           <input type="text" name="fullName" placeholder="Enter Full Name" maxlength="100" required> <br>
@@ -18,9 +23,9 @@
         City:
         <input type="text" name="city" placeholder="Enter City" maxlength="100" required><br>
         State:
-        <input list="stateDropDown" required><br>
-        <datalist id="stateDropDown">
-        <option value="State Place Holder"></datalist>
+        <select>
+        <option value="">state place holder</option>
+        </select><br>
         Zip Code:
         <input type="text" name="zipCode" placeholder="Enter Zip Code" minlength=5 maxlength="9" required><br>
         Phone Number:
@@ -29,7 +34,6 @@
         <input type="email" name="email" placeholder="Enter Email Address" required><br><br>
         <input type="submit" value="Submit">
     </form>
-      
         
   </body>
 </html>
