@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Checkout</title>
-  </head>
-  
+<html lang="en">
+    <head>
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+        <title>Checkout</title>
+        <meta charset="UTF-8">
+        <!-- This will accommodate different screen sizes and different display devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <h1>Website Name Placeholder</h1>
+
+    <section>
+        <!-- Navigation Menu (top of page) -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shppng-cart.html">Shopping Cart</a></li>
+                <li><a href="ShippingInfo.html">Shipping Information</a></li>
+                <li><a href="UserInformation.html">My Information</a></li>
+                <li><a href="Checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+        <!-- iframe can be used to display a webpage within a webpage -->
+        <!-- <iframe class="iframe" height="100%" width="100%" src="insert-htmlFileName-here" name="#"></iframe> -->
+    </section>
+
+
   <h1>Checkout</h1>
-  
+
  <body>
     <div class="col-25">
         <div class="container">
@@ -19,32 +40,32 @@
           <p><a href="#">Product 2</a> <span class="price">$Price Tag Here</span></p>
           <p><a href="#">Product 3</a> <span class="price">$Price Tag Here</span></p>
           <p><a href="#">Product 4</a> <span class="price">$Price Tag Here</span></p>
-          <hr> 
+          <hr>
         </div>
       </div>
     </div>
 
-    <form>  
-     
+    <form>
+
       Total Shipping Amount:
        <id="totalShippingAmount">Total Shipping Amount Placeholder<br><br>
-      Total Tax:  
+      Total Tax:
         <id="totalTax">Total Tax Placeholder<br><br>
       Total Shipping Charges:
         <id="totalShippingCharges">Total Shipping Charges Placeholder<br><br>
       Total Amount Due:
         <id="totalAmountDue">Total Amount Due Placeholder<br><br>
       <hr>
-     
+
     </form>
 
     <div class="row">
       <div class="col-75">
         <div class="container">
-    
+
             <div class="row">
               <div class="col-50">
-    
+
               <div class="col-50">
                 <select>
                   <option for="fname">Payment Type</option>
@@ -64,7 +85,7 @@
                 <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
                 <label for="expmonth">Exp Month</label>
                 <input type="text" id="expmonth" name="expmonth" placeholder="September">
-    
+
                 <div class="row">
                   <div class="col-50">
                     <label for="expyear">Exp Year</label>
@@ -76,7 +97,7 @@
                   </div>
                 </div>
               </div>
-    
+
             </div>
             <label>
               <input type="checkbox" checked="checked" name="sameadr">Shipping address same as billing
@@ -88,4 +109,15 @@
         </div>
       </div>
   </body>
+
+  <footer> <!-- Footer Begins -->
+      <div>
+          <ul>
+              <!-- The following are dummy links -->
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact Us</a></li>
+          </ul>
+      </div>
+  </footer> <!-- Footer Ends -->
 </html>

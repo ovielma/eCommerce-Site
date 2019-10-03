@@ -1,22 +1,38 @@
 <!DOCTYPE html>
-<html>
-    
-    <!-- link to main.css and shippingStyles.css -->
-<head>
-    <meta charset="utf-8">
-    <title>User Information</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
-    <link rel="stylesheet" type="text/css" href="UserInformationStyles.css">
-</head>
-    
+<html lang="en">
+    <head>
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+        <title>User Information</title>
+        <meta charset="UTF-8">
+        <!-- This will accommodate different screen sizes and different display devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <h1>Website Name Placeholder</h1>
+
+    <section>
+        <!-- Navigation Menu (top of page) -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shppng-cart.html">Shopping Cart</a></li>
+                <li><a href="ShippingInfo.html">Shipping Information</a></li>
+                <li><a href="UserInformation.html">My Information</a></li>
+                <li><a href="Checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+        <!-- iframe can be used to display a webpage within a webpage -->
+        <!-- <iframe class="iframe" height="100%" width="100%" src="insert-htmlFileName-here" name="#"></iframe> -->
+    </section>
+
 <h1>User Information</h1>
-  
+
  <body>
-   <img src="users.jpg.jpg" alt="Users">
-    <form>  
-        Full Name: 
+   <!--<img src="users.jpg.jpg" alt="Users">-->
+    <form>
+        Full Name:
           <input type="text" name="fullName" placeholder="Enter Full Name" maxlength="100" required> <br>
-        Address 1:  
+        Address 1:
         <input type="text" name="address1" placeholder="Enter Address 1" maxlength="100" required><br>
         Address 2:
         <input type="text" name="address2" placeholder="Enter Address 2" maxlength="100"><br>
@@ -34,6 +50,17 @@
         <input type="email" name="email" placeholder="Enter Email Address" required><br><br>
         <input type="submit" value="Submit">
     </form>
-        
+
   </body>
+
+  <footer> <!-- Footer Begins -->
+      <div>
+          <ul>
+              <!-- The following are dummy links -->
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact Us</a></li>
+          </ul>
+      </div>
+  </footer> <!-- Footer Ends -->
 </html>

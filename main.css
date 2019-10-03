@@ -5,11 +5,11 @@
   h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
-  
+
   body {
     font-family: Arial, Helvetica, sans-serif;
   }
-  
+
   /* Style the header */
   header {
     background-color: #666;
@@ -18,7 +18,7 @@
     font-size: 35px;
     color: white;
   }
-  
+
   /* Style the navigation menu */
   nav {
     -webkit-flex: 1;
@@ -26,7 +26,7 @@
     flex: 1;
     background: #ccc;
   }
-  
+
   /* Style the list inside the menu */
   nav ul {
     list-style-type: none;
@@ -51,7 +51,57 @@
   li a:hover:not(.active) {
     background-color: rgb(255, 255, 255);
   }
-  
+
+  form {
+
+    text-align: justify;
+    letter-spacing: 3px;
+    line-height: 1.8;
+  }
+
+  input[type=text]{
+      width: 25%;
+      padding: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 25px;
+      margin-top: 6px;
+      margin-bottom: 10px;
+  }
+
+  select{
+     border: 1px solid #ccc;
+     font-size: 25px;
+     height:30px;
+     width: 300px;
+     margin-top: 6px;
+     margin-bottom: 10px;
+
+  }
+
+  input[type=email]{
+      width: 25%;
+      padding: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 25px;
+      margin-top: 6px;
+      margin-bottom: 10px;
+  }
+
+
+
+  input[type=submit]{
+      background-color: antiquewhite;
+      color: black;
+      border: 2px solid #C87070;
+      font-size: 20px;
+      float: center;
+      margin-top: 6px;
+
+
+  }
+
   /* Style the content
   article {
     -webkit-flex: 3;
@@ -61,7 +111,7 @@
     padding: 10px;
   }
   */
-  
+
   /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
   @media (max-width: 600px) {
     section {
