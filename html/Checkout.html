@@ -1,13 +1,38 @@
 <html>
     <head>
       <title>Checkout</title>
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <style type="text/css">
+        .labelstyle {
+          color:white;
+          background-color: black;
+          font-family: sans-serif;
+          font-size: 1em;
+          text-align:center;
+          width: 80pt;
+        }
+        td {
+          padding:0;        
+          border: 0;
+        }
+        input {
+          color:black;
+          background-color: #ddd;
+          font-family: sans-serif;
+          font-size: 14px;
+        }
+        table {
+          border-spacing: 10px;
+        }
+      </style>
     </head>
-
   <h1>Checkout</h1>
 
  <body>
     <div class="col-25">
         <div class="container">
+          <i class="material-icons" style="font-size:36px">shopping_cart</i>
           <h4>Your Cart
             <span class="price" style="color:black">
               <i class="fa fa-shopping-cart"></i>
@@ -33,7 +58,6 @@
       Total Amount Due:
         <id="totalAmountDue">Total Amount Due Placeholder<br><br>
       <hr>
-
     </form>
 
     <div class="row">
@@ -42,46 +66,64 @@
 
             <div class="row">
               <div class="col-50">
-
               <div class="col-50">
+
+                <i class="material-icons" style="font-size:50px;">credit_card</i>
+
                 <select>
                   <option for="fname">Payment Type</option>
                   <option href="#">Mastercard</option>
                   <option href="#">Visa</option>
                   <option href="#">American Express</option>
                 </select>
+
                 <div class="icon-container">
                   <i class="fa fa-cc-visa" style="color:navy;"></i>
                   <i class="fa fa-cc-amex" style="color:blue;"></i>
                   <i class="fa fa-cc-mastercard" style="color:red;"></i>
                   <i class="fa fa-cc-discover" style="color:orange;"></i>
                 </div>
-                <label for="cname">Name on Card</label>
-                <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-                <label for="ccnum">Credit card number</label>
-                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                <label for="expmonth">Exp Month</label>
-                <input type="text" id="expmonth" name="expmonth" placeholder="September">
 
-                <div class="row">
-                  <div class="col-50">
-                    <label for="expyear">Exp Year</label>
-                    <input type="text" id="expyear" name="expyear" placeholder="2018">
-                  </div>
-                  <div class="col-50">
-                    <label for="cvv">CVV</label>
-                    <input type="text" id="cvv" name="cvv" placeholder="352">
-                  </div>
-                </div>
-              </div>
+                <table>
+                  <tr>
+                    <label for="cname"><td class="labelstyle">Name on Card</label>
+                    <td><input type="text" id="cname" name="cardname" placeholder="John More Doe"></td>
+                  </tr>
+                  <tr>
+                    <label for="ccnum"><td class="labelstyle">Credit card number</label>
+                    <td><input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"></td>
+                  </tr>
+                  <tr>
+                    <label for="expmonth"><td class="labelstyle">Exp Month</label>
+                    <td><input type="text" id="expmonth" name="expmonth" placeholder="September"></td>
+                  
+                    <div class="row">
+                      <div class="col-50">
+                        <td>
+                        <label for="expyear"><td class="labelstyle">Exp Year</label>
+                        <td><input type="text" id="expyear" name="expyear" placeholder="2018"></td>
+                        </td>
+                      </div>
+                  </tr>
 
+                    <div class="col-50">
+                      <tr>
+                      <label for="cvv"><td class="labelstyle">CVV</label>
+                      <td><input type="text" id="cvv" name="cvv" placeholder="352"></td>
+                      </tr>
+                    </div>
+                  </div> 
+                </table>               
+              </div>              
             </div>
+
             <label>
               <input type="checkbox" checked="checked" name="sameadr">Shipping address same as billing
               <br></br>
               <input type="checkbox" checked="checked" name="authpay" required>I agree and authorize the amount to be charged to my credit card.
               <br></br>
             </label>
+
             <input type="submit" value="Submit Order" class="btn">
         </div>
       </div>

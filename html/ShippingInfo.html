@@ -1,55 +1,98 @@
 <html>
-<!--changes-->
-    <head>
+    <head><!--start of head section-->
         <title>Shipping Info</title>
-    </head>
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+       
+        <!--link to use to access icons from fontawsome.com-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<!-- style used to make table cleaner and holds class for label-->
+		<style type="text/css">
+			.label {
+				color:white;
+				background-color: black;
+				font-family: sans-serif;
+				font-size: 1em;
+				text-align:center;
+				width: 80pt;
+			}
+			td {
+				padding:0;				
+				border: 0;
+			}
+			input {
+				color:black;
+				background-color: #ddd;
+				font-family: sans-serif;
+				font-size: 14px;
+			}
+			table {
+				border-spacing: 10px;
+			}
+		</style>
+
+    </head><!--end of head section-->
 
 <body>
+ 
     <h1>Shipping Information</h1>
     <h2>Please fill out your shipping information below</h2>
 
+	<label>Shipping Address same as Physical Address:</label>
+	<!-- radio button to auto fill the form -->
+	<div>
+		<label for="radio-one">Yes</label>
+		<input type="radio" id="radio-one" name="switch-one" value="yes" />
+
+		<label for="radio-two">No</label>
+		<input type="radio" id="radio-two" name="switch-one" value="no" checked/>
+	</div>
+
+	<br>
+	<!-- Start of shipping form-->	
 	<form>
-		<label>Shipping Address same as Physical Address:</label>
-		<!-- radio button to auto fill the form -->
-		<div class="switch-field">
-			<label for="radio-one">Yes</label>
-			<input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
+		<!--address icon-->
+		<i class="material-icons" style="font-size:48px;">home</i>
+    	<br>
+    	<!-- table to format user entries-->
+    	<table>
+			<tr>
+				<td class="label">Address 1: Street Address</td>
+				<td><input id = "address-1" type="text" name="Address 1" placeholder = "2322 San Marcos Dr" maxlength="100" required="" autocomplete="ship-address"></td>
+			</tr>
+			<tr>
+				<td class="label">Address 2: Apt/Suite #</td>
+				<td><input id = "address-2" type="text" name="Address 2" placeholder = "Apt 194" maxlength="100" autocomplete="ship-address2"></td>
+			</tr>
+			<tr>
+				<td class="label"> City</td>
+				<td><input id = "city" type="text" name="City" placeholder = "Austin" maxlength="100" required="" autocomplete="ship-city"></td>
+			</tr>
+			<tr>
+				<td class="label"> State</td>
+				<td><input id = "state" list= "States" name="States" required="" autocomplete="ship-state"></td>
+			</tr>
+			<!--data for dropdown menu for 'state' input. This is just for show for now until start AJAX part of project.-->
+			<datalist id="States">
+				<option value="AL"><option value="AK"><option value="AZ"><option value="AR"><option value="CA">
+				<option value="CO"><option value="CT"><option value="DE"><option value="FL"><option value="GA">
+				<option value="HI"><option value="ID"><option value="IL"><option value="IN"><option value="IA">
+				<option value="KS"><option value="KY"><option value="LA"><option value="ME"><option value="MD">
+				<option value="MA"><option value="MI"><option value="MN"><option value="MS"><option value="MO">
+				<option value="MT"><option value="NE"><option value="NV"><option value="NH"><option value="NJ">
+				<option value="NM"><option value="NY"><option value="NC"><option value="ND"><option value="OH">
+				<option value="OK"><option value="OR"><option value="PA"><option value="RI"><option value="SC">
+				<option value="SD"><option value="TN"><option value="TX"><option value="UT"><option value="VT">
+				<option value="VA"><option value="WA"><option value="WV"><option value="WI"><option value="WY">
+			</datalist>
+			<tr>
+				<td class="label">Postal Code</td>
+				<td><input id ="zip" type="number" name="Zip" placeholder ="73629"maxlength="9" minlength="5" required="" autocomplete="ship-zip"></td>
+			</tr>
+		</table><!--end of table of user input-->
 
-			<label for="radio-two">No</label>
-			<input type="radio" id="radio-two" name="switch-one" value="no" />
-		</div>
-
-		<br>
-		<br>
-		<!-- Start of shipping form-->
-		<label for = "address-1">Address 1: Street Address</label>
-		<input id = "address-1" type="text" name="Address 1" placeholder = "2322 San Marcos Dr" maxlength="100" required="" autocomplete="ship-address"><br>
-
-		<label for="address-2">Address 2: Apt/Suite #</label>
-		<input id = "address-2" type="text" name="Address 2" placeholder = "Apt 194" maxlength="100" autocomplete="ship-address2"><br>
-
-		<label for ="city"> City</label>
-		<input id = "city" type="text" name="City" placeholder = "Austin" maxlength="100" required="" autocomplete="ship-city"><br>
-
-		<label for = "state"> State</label>
-		<input id = "state" list= "States" name="States" required="" autocomplete="ship-state">
-		<!--Here is the dropdown menu for 'state' input. This is just for show for now until start AJAX part of project.-->
-		<datalist id="States">
-			<option value="AL"><option value="AK"><option value="AZ"> <option value="AR"><option value="CA"><option value="CO">	<option value="CT"><option value="DE"><option value="FL">
-			<option value="GA"><option value="HI"><option value="ID"> <option value="IL"><option value="IN"><option value="IA">
-			<option value="KS"><option value="KY"><option value="LA">
-			<option value="ME"><option value="MD"><option value="MA">
-			<option value="MI"><option value="MN"><option value="MS">
-			<option value="MO"><option value="MT"><option value="NE"> <option value="NV"><option value="NH"><option value="NJ"> <option value="NM"><option value="NY"><option value="NC"> <option value="ND"><option value="OH"><option value="OK">	<option value="OR"><option value="PA"><option value="RI">
-			<option value="SC"><option value="SD"><option value="TN"> <option value="TX"><option value="UT"><option value="VT"> <option value="VA"><option value="WA"><option value="WV"> <option value="WI"><option value="WY">
-		</datalist><br>
-
-		<label for="zip">Postal Code</label>
-		<input id ="zip" type="number" name="Zip" placeholder ="73629"maxlength="9" minlength="5" required="" autocomplete="ship-zip"><br>
-
-		<!--Submit button to check out link here formaction="link to Checkout"-->
+		<!--submit button with formaction to go to checkout page-->
 		<input type="submit" value="Go to Checkout" formaction ="Checkout.html" >
-	</form> <!--end of form-->
-
+	</form> <!--end of form-->	
 </body>
 </html>
