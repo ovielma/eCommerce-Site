@@ -14,7 +14,7 @@
         </header>
         
         <section>
-            <!-- Navigation Menu (top of page) -->
+            <!-- Navigation Menu (top of page)
             <nav id="navbar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -24,9 +24,20 @@
                     <li><a href="Checkout.html">Checkout</a></li>
                 </ul>
             </nav>
+
+            Navigation Menu (top of page) -->
+            <nav>
+                <ul id="navbar">
+                  <li><a href="html/products.html" target="contentFrame" onclick="applyActiveCss(this.id);" id="home">Home</a></li>
+                  <li><a href="html/shppng-cart.html" target="contentFrame" onclick="applyActiveCss(this.id);" id="cart">Shopping Cart</a></li>
+                  <li><a href="html/ShippingInfo.html" target="contentFrame" onclick="applyActiveCss(this.id);" id="shipping">Shipping Information</a></li>
+                  <li><a href="html/UserInformation.html" target="contentFrame" onclick="applyActiveCss(this.id);" id="userInfo">My Information</a></li>
+                  <li><a href="html/Checkout.html" target="contentFrame" onclick="applyActiveCss(this.id);" id="checkout">Checkout</a></li>
+                </ul>
+              </nav>
             <!-- iframe can be used to display a webpage within a webpage -->
             <article class="iframe">
-                <iframe class="iframe" height="100%" width="100%" src="shppng-cart.html" name="contentFrame"></iframe> 
+                <iframe class="iframe" height="100%" width="100%" src="html/products.html" name="contentFrame"></iframe> 
             </article>
         </section>
     </body>
