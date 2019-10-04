@@ -1,101 +1,107 @@
-<html>
-    <head><!--start of head section-->
-        <title>Shipping Info</title>
-        <link href="main.css" rel="stylesheet" type="text/css"/>
-       
-        <!--link to use to access icons from fontawsome.com-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<!-- style used to make table cleaner and holds class for label-->
-		<style type="text/css">
-			.label {
-				color:white;
-				background-color: black;
-				font-family: sans-serif;
-				font-size: 1em;
-				text-align:center;
-				width: 80pt;
-			}
-			td {
-				padding:0;				
-				border: 0;
-			}
-			input {
-				color:black;
-				background-color: #ddd;
-				font-family: sans-serif;
-				font-size: 14px;
-			}
-			table {
-				border-spacing: 10px;
-			}
-		</style>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="../main.css" rel="stylesheet" type="text/css"/>
+		<title>Shipping Information</title>
+		<meta charset="UTF-8">
+		<!-- This will accommodate different screen sizes and different display devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--link to use to access icons from fontawsome.com-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
 
-    </head><!--end of head section-->
+	<body>
+		<header id="site-header">
+			<img src="../images/logo_transparent.png" alt="Tech Junkies Logo">
+		</header>
 
-<body>
- 
-    <h1>Shipping Information</h1>
-    <h2>
-    <!--shipping icon icon-->
-	<i class="fa fa-truck" style="font-size:36px;"></i>
-	Please fill out your shipping information below
-	</h2>
+		<section>
+				<!-- Navigation Menu (top of page) -->
+				<nav id="navbar">
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../html/shppng-cart.html">Shopping Cart</a></li>
+						<li><a href="../html/ShippingInfo.html">Shipping Information</a></li>
+						<li><a href="../html/UserInformation.html">My Information</a></li>
+						<li><a href="../html/Checkout.html">Checkout</a></li>
+					</ul>
+				</nav>
+			</section>
+	
+		<h1>Shipping Information</h1>
+		<h2>
+		<!--shipping icon icon-->
+		<i class="fa fa-truck" style="font-size:36px;"></i>
+		Please fill out your shipping information below
+		</h2>
 
-	<label>Shipping Address same as Physical Address:</label>
-	<!-- radio button to auto fill the form -->
-	<div>
-		<label for="radio-one">Yes</label>
-		<input type="radio" id="radio-one" name="switch-one" value="yes" />
+		<label>Shipping Address same as Physical Address:</label>
+		<!-- radio button to auto fill the form -->
+		<div>
+			<label for="radio-one">Yes</label>
+			<input type="radio" id="radio-one" name="switch-one" value="yes" />
 
-		<label for="radio-two">No</label>
-		<input type="radio" id="radio-two" name="switch-one" value="no" checked/>
-	</div>
+			<label for="radio-two">No</label>
+			<input type="radio" id="radio-two" name="switch-one" value="no" checked/>
+		</div>
 
-	<br>
-	<!-- Start of shipping form-->	
-	<form>
-		
-    	<br>
-    	<!-- table to format user entries-->
-    	<table>
-			<tr>
-				<td class="label">Address 1: Street Address</td>
-				<td><input id = "address-1" type="text" name="Address 1" placeholder = "2322 San Marcos Dr" maxlength="100" required="" autocomplete="ship-address"></td>
-			</tr>
-			<tr>
-				<td class="label">Address 2: Apt/Suite #</td>
-				<td><input id = "address-2" type="text" name="Address 2" placeholder = "Apt 194" maxlength="100" autocomplete="ship-address2"></td>
-			</tr>
-			<tr>
-				<td class="label"> City</td>
-				<td><input id = "city" type="text" name="City" placeholder = "Austin" maxlength="100" required="" autocomplete="ship-city"></td>
-			</tr>
-			<tr>
-				<td class="label"> State</td>
-				<td><input id = "state" list= "States" name="States" required="" autocomplete="ship-state"></td>
-			</tr>
-			<!--data for dropdown menu for 'state' input. This is just for show for now until start AJAX part of project.-->
-			<datalist id="States">
-				<option value="AL"><option value="AK"><option value="AZ"><option value="AR"><option value="CA">
-				<option value="CO"><option value="CT"><option value="DE"><option value="FL"><option value="GA">
-				<option value="HI"><option value="ID"><option value="IL"><option value="IN"><option value="IA">
-				<option value="KS"><option value="KY"><option value="LA"><option value="ME"><option value="MD">
-				<option value="MA"><option value="MI"><option value="MN"><option value="MS"><option value="MO">
-				<option value="MT"><option value="NE"><option value="NV"><option value="NH"><option value="NJ">
-				<option value="NM"><option value="NY"><option value="NC"><option value="ND"><option value="OH">
-				<option value="OK"><option value="OR"><option value="PA"><option value="RI"><option value="SC">
-				<option value="SD"><option value="TN"><option value="TX"><option value="UT"><option value="VT">
-				<option value="VA"><option value="WA"><option value="WV"><option value="WI"><option value="WY">
-			</datalist>
-			<tr>
-				<td class="label">Postal Code</td>
-				<td><input id ="zip" type="number" name="Zip" placeholder ="73629"maxlength="9" minlength="5" required="" autocomplete="ship-zip"></td>
-			</tr>
-		</table><!--end of table of user input-->
+		<br>
+		<!-- Start of shipping form-->	
+		<form>
+			
+			<br>
+			<!-- table to format user entries-->
+			<table>
+				<tr>
+					<td class="label">Address 1: Street Address</td>
+					<td><input id = "address-1" type="text" name="Address 1" placeholder = "2322 San Marcos Dr" maxlength="100" required="" autocomplete="ship-address"></td>
+				</tr>
+				<tr>
+					<td class="label">Address 2: Apt/Suite #</td>
+					<td><input id = "address-2" type="text" name="Address 2" placeholder = "Apt 194" maxlength="100" autocomplete="ship-address2"></td>
+				</tr>
+				<tr>
+					<td class="label"> City</td>
+					<td><input id = "city" type="text" name="City" placeholder = "Austin" maxlength="100" required="" autocomplete="ship-city"></td>
+				</tr>
+				<tr>
+					<td class="label"> State</td>
+					<td><input id = "state" list= "States" name="States" required="" autocomplete="ship-state"></td>
+				</tr>
+				<!--data for dropdown menu for 'state' input. This is just for show for now until start AJAX part of project.-->
+				<datalist id="States">
+					<option value="AL"><option value="AK"><option value="AZ"><option value="AR"><option value="CA">
+					<option value="CO"><option value="CT"><option value="DE"><option value="FL"><option value="GA">
+					<option value="HI"><option value="ID"><option value="IL"><option value="IN"><option value="IA">
+					<option value="KS"><option value="KY"><option value="LA"><option value="ME"><option value="MD">
+					<option value="MA"><option value="MI"><option value="MN"><option value="MS"><option value="MO">
+					<option value="MT"><option value="NE"><option value="NV"><option value="NH"><option value="NJ">
+					<option value="NM"><option value="NY"><option value="NC"><option value="ND"><option value="OH">
+					<option value="OK"><option value="OR"><option value="PA"><option value="RI"><option value="SC">
+					<option value="SD"><option value="TN"><option value="TX"><option value="UT"><option value="VT">
+					<option value="VA"><option value="WA"><option value="WV"><option value="WI"><option value="WY">
+				</datalist>
+				<tr>
+					<td class="label">Postal Code</td>
+					<td><input id ="zip" type="number" name="Zip" placeholder ="73629"maxlength="9" minlength="5" required="" autocomplete="ship-zip"></td>
+				</tr>
+			</table><!--end of table of user input-->
 
-		<!--submit button with formaction to go to checkout page-->
-		<input type="submit" value="Go to Checkout" formaction ="Checkout.html" >
-	</form> <!--end of form-->	
-</body>
+			<!--submit button with formaction to go to checkout page-->
+			<input type="submit" value="Go to Checkout" formaction ="Checkout.html" >
+		</form> <!--end of form-->	
+		<br>
+	</body>
+
+    <!-- Footer Begins -->
+    <footer>
+		<div>
+			<p>Find us on social media</p>
+			<i class="fa fa-facebook-square" style="font-size:24px"></i>
+			<i class="fa fa-instagram" style="font-size:24px"></i>
+			<i class="fa fa-snapchat-square" style="font-size:24px"></i>
+			<i class="fa fa-twitter-square" style="font-size:24px"></i>
+		</div>
+	</footer>
+	<!-- Footer Ends -->
 </html>

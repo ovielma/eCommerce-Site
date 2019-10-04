@@ -1,130 +1,143 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+      <link href="../main.css" rel="stylesheet" type="text/css"/>
       <title>Checkout</title>
-      <link rel="stylesheet" type="text/css" href="main.css">
+      <meta charset="UTF-8">
+      <!-- This will accommodate different screen sizes and different display devices -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--link to use to access icons from fontawsome.com-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <style type="text/css">
-        .labelstyle {
-          color:white;
-          background-color: black;
-          font-family: sans-serif;
-          font-size: 1em;
-          text-align:center;
-          width: 80pt;
-        }
-        td {
-          padding:0;        
-          border: 0;
-        }
-        input {
-          color:black;
-          background-color: #ddd;
-          font-family: sans-serif;
-          font-size: 14px;
-        }
-        table {
-          border-spacing: 10px;
-        }
-      </style>
     </head>
-  <h1>Checkout</h1>
 
- <body>
-    <div class="col-25">
-        <div class="container">
-          <h3>Your Cart
-            <span class="price" style="color:black">
-              <i class="fa fa-shopping-cart"style="font-size:36px;"></i>
-            </span>
-          </h3>
-          <p><a href="#">Product 1</a> <span class="price">$Price Tag Here</span></p>
-          <p><a href="#">Product 2</a> <span class="price">$Price Tag Here</span></p>
-          <p><a href="#">Product 3</a> <span class="price">$Price Tag Here</span></p>
-          <p><a href="#">Product 4</a> <span class="price">$Price Tag Here</span></p>
-          <hr>
+    <body>
+        <header id="site-header">
+            <img src="../images/logo_transparent.png" alt="Tech Junkies Logo">
+        </header>
+
+        <section>
+            <!-- Navigation Menu (top of page) -->
+            <nav id="navbar">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../html/shppng-cart.html">Shopping Cart</a></li>
+                    <li><a href="../html/ShippingInfo.html">Shipping Information</a></li>
+                    <li><a href="../html/UserInformation.html">My Information</a></li>
+                    <li><a href="../html/Checkout.html">Checkout</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <h1>Checkout</h1>
+
+        <div class="col-25">
+            <div class="container">
+              <h3>Your Cart
+                <span class="price" style="color:black">
+                  <i class="fa fa-shopping-cart"style="font-size:36px;"></i>
+                </span>
+              </h3>
+              <p><a href="#">Product 1</a> <span class="price">$Price Tag Here</span></p>
+              <p><a href="#">Product 2</a> <span class="price">$Price Tag Here</span></p>
+              <p><a href="#">Product 3</a> <span class="price">$Price Tag Here</span></p>
+              <p><a href="#">Product 4</a> <span class="price">$Price Tag Here</span></p>
+              <hr>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <form>
+        <form>
 
-      Total Shipping Amount:
-       <id="totalShippingAmount">Total Shipping Amount Placeholder<br><br>
-      Total Tax:
-        <id="totalTax">Total Tax Placeholder<br><br>
-      Total Shipping Charges:
-        <id="totalShippingCharges">Total Shipping Charges Placeholder<br><br>
-      Total Amount Due:
-        <id="totalAmountDue">Total Amount Due Placeholder<br><br>
-      <hr>
-    </form>
+          Total Shipping Amount:
+          <id="totalShippingAmount">Total Shipping Amount Placeholder<br><br>
+          Total Tax:
+            <id="totalTax">Total Tax Placeholder<br><br>
+          Total Shipping Charges:
+            <id="totalShippingCharges">Total Shipping Charges Placeholder<br><br>
+          Total Amount Due:
+            <id="totalAmountDue">Total Amount Due Placeholder<br><br>
+          <hr>
+        </form>
 
-    <div class="row">
-      <div class="col-75">
-        <div class="container">
+        <div class="row">
+          <div class="col-75">
+            <div class="container">
 
-            <div class="row">
-              <div class="col-50">
-              <div class="col-50">
+                <div class="row">
+                  <div class="col-50">
+                  <div class="col-50">
 
-                <i class="fa fa-credit-card" style="font-size:36px;"></i>
+                    <i class="fa fa-credit-card" style="font-size:36px;"></i>
 
-                <select>
-                  <option for="fname">Payment Type</option>
-                  <option href="#">Mastercard</option>
-                  <option href="#">Visa</option>
-                  <option href="#">American Express</option>
-                </select>
+                    <select>
+                      <option for="fname">Payment Type</option>
+                      <option href="#">Mastercard</option>
+                      <option href="#">Visa</option>
+                      <option href="#">American Express</option>
+                    </select>
 
-                <div class="icon-container">
-                  <i class="fa fa-cc-visa" style="color:navy; font-size:36px"></i>
-                  <i class="fa fa-cc-amex" style="color:blue; font-size:36px"></i>
-                  <i class="fa fa-cc-mastercard" style="color:red; font-size:36px"></i>
-                  <i class="fa fa-cc-discover" style="color:orange; font-size:36px"></i>
+                    <div class="icon-container">
+                      <i class="fa fa-cc-visa" style="color:navy; font-size:36px"></i>
+                      <i class="fa fa-cc-amex" style="color:blue; font-size:36px"></i>
+                      <i class="fa fa-cc-mastercard" style="color:red; font-size:36px"></i>
+                      <i class="fa fa-cc-discover" style="color:orange; font-size:36px"></i>
+                    </div>
+
+                    <table>
+                      <tr>
+                        <label for="cname"><td class="labelstyle">Name on Card</label>
+                        <td><input type="text" id="cname" name="cardname" placeholder="John More Doe"></td>
+                      </tr>
+                      <tr>
+                        <label for="ccnum"><td class="labelstyle">Credit card number</label>
+                        <td><input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"></td>
+                      </tr>
+                      <tr>
+                        <label for="expmonth"><td class="labelstyle">Exp Month</label>
+                        <td><input type="text" id="expmonth" name="expmonth" placeholder="September"></td>
+                      
+                        <div class="row">
+                          <div class="col-50">
+                            <td>
+                            <label for="expyear"><td class="labelstyle">Exp Year</label>
+                            <td><input type="text" id="expyear" name="expyear" placeholder="2018"></td>
+                            </td>
+                          </div>
+                      </tr>
+
+                        <div class="col-50">
+                          <tr>
+                          <label for="cvv"><td class="labelstyle">CVV</label>
+                          <td><input type="text" id="cvv" name="cvv" placeholder="352"></td>
+                          </tr>
+                        </div>
+                      </div> 
+                    </table>               
+                  </div>              
                 </div>
 
-                <table>
-                  <tr>
-                    <label for="cname"><td class="labelstyle">Name on Card</label>
-                    <td><input type="text" id="cname" name="cardname" placeholder="John More Doe"></td>
-                  </tr>
-                  <tr>
-                    <label for="ccnum"><td class="labelstyle">Credit card number</label>
-                    <td><input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"></td>
-                  </tr>
-                  <tr>
-                    <label for="expmonth"><td class="labelstyle">Exp Month</label>
-                    <td><input type="text" id="expmonth" name="expmonth" placeholder="September"></td>
-                  
-                    <div class="row">
-                      <div class="col-50">
-                        <td>
-                        <label for="expyear"><td class="labelstyle">Exp Year</label>
-                        <td><input type="text" id="expyear" name="expyear" placeholder="2018"></td>
-                        </td>
-                      </div>
-                  </tr>
+                <label>
+                  <input type="checkbox" checked="checked" name="sameadr">Shipping address same as billing
+                  <br></br>
+                  <input type="checkbox" checked="checked" name="authpay" required>I agree and authorize the amount to be charged to my credit card.
+                  <br></br>
+                </label>
 
-                    <div class="col-50">
-                      <tr>
-                      <label for="cvv"><td class="labelstyle">CVV</label>
-                      <td><input type="text" id="cvv" name="cvv" placeholder="352"></td>
-                      </tr>
-                    </div>
-                  </div> 
-                </table>               
-              </div>              
+                <input type="submit" value="Submit Order" class="btn">
             </div>
+            <br>
+          </div>
+    </body>
 
-            <label>
-              <input type="checkbox" checked="checked" name="sameadr">Shipping address same as billing
-              <br></br>
-              <input type="checkbox" checked="checked" name="authpay" required>I agree and authorize the amount to be charged to my credit card.
-              <br></br>
-            </label>
-
-            <input type="submit" value="Submit Order" class="btn">
+    <!-- Footer Begins -->
+    <footer>
+        <div>
+            <p>Find us on social media</p>
+            <i class="fa fa-facebook-square" style="font-size:24px"></i>
+            <i class="fa fa-instagram" style="font-size:24px"></i>
+            <i class="fa fa-snapchat-square" style="font-size:24px"></i>
+            <i class="fa fa-twitter-square" style="font-size:24px"></i>
         </div>
-      </div>
-  </body>
+    </footer>
+    <!-- Footer Ends -->
 </html>
