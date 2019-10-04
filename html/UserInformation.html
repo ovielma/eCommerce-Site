@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-    <body>
       <header id="site-header">
         <img src="../images/logo_transparent.png" alt="Tech Junkies Logo">
       </header>
@@ -19,41 +18,76 @@
 				<!-- Navigation Menu (top of page) -->
 				<nav id="navbar">
 					<ul>
-						<li><a href="../index.html">Home</a></li>
-						<li><a href="../html/shppng-cart.html">Shopping Cart</a></li>
-						<li><a href="../html/ShippingInfo.html">Shipping Information</a></li>
-						<li><a href="../html/UserInformation.html">My Information</a></li>
-						<li><a href="../html/Checkout.html">Checkout</a></li>
+            <li><a href="../index.html">Home</a></li>
+             <li><a href="../html/UserInformation.html">My Information</a></li>
+             <li><a href="../html/shppng-cart.html">Shopping Cart</a></li>
+             <li><a href="../html/ShippingInfo.html">Shipping Information</a></li>
+             <li><a href="../html/Checkout.html">Checkout</a></li>
 					</ul>
 				</nav>
 			</section>
 
+ <body id="userBody">
       <h1><i class="fa fa-user-circle" style="font-size:48px"></i>User Information</h1>
 
       <!--<img src="users.jpg.jpg" alt="Users">-->
-        <form>
-            Full Name:
-              <input type="text" name="fullName" placeholder="Enter Full Name" maxlength="100" required> <br>
-            Address 1:
-            <input type="text" name="address1" placeholder="Enter Address 1" maxlength="100" required><br>
-            Address 2:
-            <input type="text" name="address2" placeholder="Enter Address 2" maxlength="100"><br>
-            City:
-            <input type="text" name="city" placeholder="Enter City" maxlength="100" required><br>
-            State:
-            <select>
-            <option value="">state place holder</option>
-            </select><br>
-            Zip Code:
-            <input type="text" name="zipCode" placeholder="Enter Zip Code" minlength=5 maxlength="9" required><br>
-            Phone Number:
-            <input type="text" name="phone" placeholder="Format: xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>  (format: xxx-xxx-xxxx)<br>
-            Email:
-            <input type="email" name="email" placeholder="Enter Email Address" required><br><br>
-            <input type="submit" value="Submit">
-        </form>
 
-    </body>
+              <table>
+                <tr>
+                  <label for="uname"><td class="labelstyle">Full Name</label>
+                  <td><input type="text" id="uname" name="username" placeholder="Enter Full Name" maxlength="100" required></td>
+                </tr>
+                <tr>
+                  <label for="a1name"><td class="labelstyle">Address 1</label>
+                  <td><input type="text" id="a1name" name="address1" placeholder="Enter Address 1" maxlength="100" required></td>
+                </tr>
+                <tr>
+                  <label for="a2name"><td class="labelstyle">Address 2</label>
+                  <td><input type="text" id="a2name" name="address2" placeholder="Enter Address 2" maxlength="100" required></td>
+                </tr>
+                <tr>
+                  <label for="ctyname"><td class="labelstyle">Address 1</label>
+                  <td><input type="text" id="ctyname" name="cityname" placeholder="Enter City Name" maxlength="100" required></td>
+                </tr>
+                <tr>
+                  <label for= "statename"><td class="labelstyle">State</label>
+                  <td>
+                  <input list="States" id="myStates" name="myStates"/>
+                  <datalist id="States">
+          					<option value="AL"><option value="AK"><option value="AZ"><option value="AR"><option value="CA">
+          					<option value="CO"><option value="CT"><option value="DE"><option value="FL"><option value="GA">
+          					<option value="HI"><option value="ID"><option value="IL"><option value="IN"><option value="IA">
+          					<option value="KS"><option value="KY"><option value="LA"><option value="ME"><option value="MD">
+          					<option value="MA"><option value="MI"><option value="MN"><option value="MS"><option value="MO">
+          					<option value="MT"><option value="NE"><option value="NV"><option value="NH"><option value="NJ">
+          					<option value="NM"><option value="NY"><option value="NC"><option value="ND"><option value="OH">
+          					<option value="OK"><option value="OR"><option value="PA"><option value="RI"><option value="SC">
+          					<option value="SD"><option value="TN"><option value="TX"><option value="UT"><option value="VT">
+          					<option value="VA"><option value="WA"><option value="WV"><option value="WI"><option value="WY">
+          				</datalist>
+                </td>
+              </tr>
+              <tr>
+                <label for="zname"><td class="labelstyle">Zip Code</label>
+                <td><input type="text" id="zname" name="zipCode" placeholder="Enter Zip Code" minlength=5 maxlength="9" required></td>
+              </tr>
+              <tr>
+                <label for="pnumber"><td class="labelstyle">Phone Number</label>
+                <td><input type="text" id="pnumber" name="phoneNumber" placeholder="Format: xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>  (format: xxx-xxx-xxxx)</td>
+              </tr>
+              <tr>
+                <label for="ename"><td class="labelstyle">Email</label>
+                <td><input type="email" id="ename" name="emailName" placeholder="Enter Email Address" required></td>
+              </tr>
+              </table>
+
+                  <input type="submit" value="Submit Information" class="btn" id="infoButton">
+                </div>
+                <br>
+              </div>
+
+
+          </body>
 
     <!-- Footer Begins -->
     <footer>

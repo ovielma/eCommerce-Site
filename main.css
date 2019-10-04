@@ -17,17 +17,19 @@
 #site-header {
   width: 400px;
   height: 200px;
-  background-color: white;
+  background-color: #D0E4F5;
 }
 #site-header img {
   border: 3px solid rgb(0, 0, 0);
   float: left;
 }
-  
+
   body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #D0E4F5;
+    
   }
-  
+
   /* Style the header */
   header {
     background-color: #666;
@@ -55,7 +57,7 @@
   bottom: 0;
   border: none;
 }
-  
+
   /* Style the navigation menu */
   nav {
     -webkit-flex: 1;
@@ -63,7 +65,7 @@
     flex: 1;
     background: #ccc;
   }
-  
+
   /* Style the list inside the menu */
   nav ul {
     list-style-type: none;
@@ -89,7 +91,7 @@
   #navbar li a:hover {
     background-color: rgb(41, 41, 41);
   }
-  
+
   #navbar li a.active {
     color: white;
   }
@@ -112,7 +114,7 @@
     width: 80pt;
   }
   td {
-    padding:0;        
+    padding:0;
     border: 0;
   }
   input {
@@ -124,3 +126,20 @@
   table {
     border-spacing: 10px;
   }
+
+#shoppingBody{
+  background: #D0E4F5 url("https://i.postimg.cc/ydZ9P69F/logo-transparentcropped.png") no-repeat scroll 100% 70%;
+  background-size: 250px 210px;
+}
+
+#userBody{
+  background: #D0E4F5 url("https://i.postimg.cc/ydZ9P69F/logo-transparentcropped.png") no-repeat scroll 100% 70%;
+}
+
+#shippingBody{
+    background: #D0E4F5 url("https://i.postimg.cc/ydZ9P69F/logo-transparentcropped.png") no-repeat scroll 100% 70%;
+}
+
+#checkoutBody{
+  background: #D0E4F5 url("https://i.postimg.cc/ydZ9P69F/logo-transparentcropped.png") no-repeat scroll 100% 85%;
+}
