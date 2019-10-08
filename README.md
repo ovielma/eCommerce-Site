@@ -1,5 +1,5 @@
 # eCommerce Site for Tech Junkies
-![Image of Tech Junkies Logo](./images/logo_transparent.png = 128x128)
+![Image of Tech Junkies Logo](./images/logo_transparent.png =128x)
 
 In this project we will be building a web application for a fictional e-commerce shopping cart.
 
