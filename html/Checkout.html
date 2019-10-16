@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <link href="../main.css" rel="stylesheet" type="text/css"/>
       <title>Checkout</title>
       <meta charset="UTF-8">
       <!-- This will accommodate different screen sizes and different display devices -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!--link to use to access icons from fontawsome.com-->
+      <!--link to use to access icons from fontawsome.com, main CSS file, and JavaScript file-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <script type="text/javascript" src="script.js"></script>
+      <link href="../main.css" rel="stylesheet" type="text/css"/>
+      <script type="text/javascript"  src="script.js"></script>
     </head>
 
     <body id ="checkoutBody">
@@ -38,9 +38,10 @@
                   <i class="fa fa-shopping-cart"style="font-size:36px;"></i>
                 </span>
               </h3>
-              <p><a href="#">Product 1</a> <span class="price">$Price Tag Here</span></p>
-              <p><a href="#">Product 2</a> <span class="price">$Price Tag Here</span></p>
-              <p><a href="#">Product 3</a> <span class="price">$Price Tag Here</span></p>
+              <p><a href="#"><script>getProductOne()</script></a><span class="price"><script>getPriceOne()</script></span></p>
+              <p><a href="#"><script>getProductTwo()</script></a> <span class="price"><script>getPriceTwo()</script></span></p>
+              <script type="text/javascript">productsObject.setProductOne("Pizza", 45.99)</script>
+              <p><a href="#"><script>getProductOne()</script></a><span class="price"><script>getPriceOne()</script></span></p>
               <p><a href="#">Product 4</a> <span class="price">$Price Tag Here</span></p>
               <hr>
             </div>
@@ -51,13 +52,13 @@
           <!--form begins-->
 
           Total Shipping Amount:
-          <id="totalShippingAmount">Total Shipping Amount Placeholder<br><br>
+          <id="totalShippingAmount"><script> sumFunction(3,4)</script><br><br>
           Total Tax:
-            <id="totalTax">Total Tax Placeholder<br><br>
+            <id="totalTax"><script> sumFunction(3,4)</script><br><br>
           Total Shipping Charges:
-            <id="totalShippingCharges">Total Shipping Charges Placeholder<br><br>
+            <id="totalShippingCharges"><script> sumFunction(3,4)</script><br><br>
           Total Amount Due:
-            <id="totalAmountDue">Total Amount Due Placeholder<br><br>
+            <id="totalAmountDue"><script> sumFunction(3,4)</script><br><br>
           <hr>
 
 
