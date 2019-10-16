@@ -108,7 +108,7 @@
   }
   input {
     color:black;
-    background-color: #ddd;
+    background-color: white;
     font-family: sans-serif;
     font-size: 14px;
   }
@@ -134,7 +134,7 @@
 }
 
 /* Product Card Styles */
-.card {
+.products {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
@@ -148,7 +148,7 @@
   font-size: 22px;
 }
 
-.card button {
+.products button {
   border: none;
   outline: 0;
   padding: 12px;
@@ -160,6 +160,6 @@
   font-size: 18px;
 }
 
-.card button:hover {
+.products button:hover {
   opacity: 0.7;
 }
