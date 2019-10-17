@@ -38,10 +38,9 @@
                   <i class="fa fa-shopping-cart"style="font-size:36px;"></i>
                 </span>
               </h3>
-              <p><a href="#"><script>getProductOne()</script></a><span class="price"><script>getPriceOne()</script></span></p>
-              <p><a href="#"><script>getProductTwo()</script></a> <span class="price"><script>getPriceTwo()</script></span></p>
-              <script type="text/javascript">productsObject.setProductOne("Pizza", 45.99)</script>
-              <p><a href="#"><script>getProductOne()</script></a><span class="price"><script>getPriceOne()</script></span></p>
+              <p><a href="#"><script>getProductOne()</script></a><span class="price"><script>document.write(getPriceOne())</script></span></p>
+              <p><a href="#"><script>getProductTwo()</script></a> <span class="price"><script>document.write(getPriceTwo())</script></span></p>
+              <p><a href="#"><script></script></a><span class="price"><script></script></span></p>
               <p><a href="#">Product 4</a> <span class="price">$Price Tag Here</span></p>
               <hr>
             </div>
@@ -51,17 +50,16 @@
         <form>
           <!--form begins-->
 
-          Total Shipping Amount:
-          <id="totalShippingAmount"><script> sumFunction(3,4)</script><br><br>
+          Total Shopping Amount:
+          <id="totalShippingAmount"><script> productsObject.setSubtotal(sumFunction(getPriceOne(),getPriceTwo(),0,0))
+          document.write(getSubtotal())</script><br><br>
           Total Tax:
-            <id="totalTax"><script> sumFunction(3,4)</script><br><br>
+            <id="totalTax"><script>document.write(tax())</script><br><br>
           Total Shipping Charges:
-            <id="totalShippingCharges"><script> sumFunction(3,4)</script><br><br>
+            <id="totalShippingCharges"><script> document.write(shipping())</script><br><br>
           Total Amount Due:
-            <id="totalAmountDue"><script> sumFunction(3,4)</script><br><br>
+            <id="totalAmountDue"><script>document.write(sumFunction(getPriceOne(),getPriceTwo(),0,0))</script><br><br>
           <hr>
-
-
         <div class="row">
           <div class="col-75">
             <div class="container">
@@ -126,8 +124,7 @@
                   <input type="checkbox" checked="checked" name="authpay" required>I agree and authorize the amount to be charged to my credit card.
                   <br></br>
                 </label>
-
-                <input type="submit" value="Submit Order" class="btn">
+                <input type="submit" value="Submit Order" class="btn" onclick="submission()">
             </div>
             <br>
           </div>
