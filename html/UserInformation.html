@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--link to use to access icons from fontawsome.com-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript"  src="script.js"></script>
     </head>
 
       <header id="site-header">
@@ -69,23 +70,26 @@
               </tr>
               <tr>
                 <label for="zname"><td class="labelstyle">Zip Code</label>
-                <td><input type="text" id="zname" name="zipCode" placeholder="Enter Zip Code" minlength=5 maxlength="9" required></td>
+                <td><input type="text" id="zname" name="zipCode" placeholder="Enter Zip Code" minlength="5" maxlength="9" required></td>
               </tr>
               <tr>
                 <label for="pnumber"><td class="labelstyle">Phone Number</label>
-                <td><input type="text" id="pnumber" name="phoneNumber" placeholder="Format: xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></td>
+                <td><input type="text" id="phoneNumberUserInfo" name="phoneNumberUserInfo" placeholder="Format: xxx-xxx-xxxx" maxlength="12"  title="Enter Format: xxx-xxx-xxxx">
+
               </tr>
               <tr>
                 <label for="ename"><td class="labelstyle">Email</label>
-                <td><input type="email" id="ename" name="emailName" placeholder="Enter Email Address" required></td>
+                <td><input type="text" id="emailUserInfo" name="emailName" placeholder="Enter Email Address" maxlength="100"></td>
               </tr>
               </table>
 
-                  <input type="submit" value="Submit Information" class="btn" id="infoButton">
+                  <input type="submit" onclick="onClickUserInformation();" value="Submit Information" class="btn" id="infoButton">
                 </div>
                 <br>
               </div>
+
             </form>
+
           </body>
 
     <!-- Footer Begins -->

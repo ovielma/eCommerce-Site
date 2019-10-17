@@ -1,4 +1,66 @@
 
+
+//********************************************/
+/*USER INFORMATION FUNCTIONS START - *Jason */
+
+/*class for later?
+class Customer {
+	constructor(fullname, address1, address2, city, state, zipcode, phoneNumber, emailname) {
+		this.fullname = fullname;
+		this.address1 = address1;
+		this.address2 = address2;
+		this.city = city;
+		this.state = state;
+		this.zipcode = zipcode;
+		this.phonenumber = phonenumber;
+		this.email = emailname;
+	}
+}*/
+
+
+//test function
+/*function display(){
+	alert("hello world");
+}*/
+
+function validatePhoneNumber(){
+	var phoneNumberInfo = document.getElementById("phoneNumberUserInfo").value;
+	var phoneNumberValidation = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/;
+	var emailNameValidate = "last";
+	//var emailNameValidation = /\S+@\S+/;
+	if( (phoneNumberInfo.match(phoneNumberValidation)))
+	{
+		return true;
+	}
+	else
+	{
+		alert("Phone Number is Invalid Format. Required format = xxx-xxx-xxxx");
+		return false;
+	}
+}
+
+function validateEmailAddress() {
+  var str = document.getElementById("emailUserInfo");
+  var patt = new RegExp("@");
+  var res = patt.test(str);
+  if (res == true)
+      {
+          return true;
+      }
+    else {
+        alert("The Email Address is Invalid. Email Address Needs '@' symbol to be valid.");
+        return false;
+    }
+}
+
+function onClickUserInformation(){
+	validatePhoneNumber();
+	validateEmailAddress();
+}
+//******************************************/
+/*USER INFORMATION FUNCTIONS END - *Jason */
+
+
 /* function to calculate the sum of 4 numbers*/
 function sumFunction(p1, p2, p3, p4) {
 	parseFloat(p1);parseFloat(p2);parseFloat(p3);parseFloat(p4);
