@@ -120,6 +120,8 @@ function shippingSubmitFunction(){
 }
 //******************************************/
 /*USER INFORMATION FUNCTIONS END - *Jason */ 
+
+/********Start Checkout Functions***********/
 //validates keypressed is only a number
 function isNumber(evt){
 	var ch = String.fromCharCode(evt.which);
@@ -127,15 +129,28 @@ function isNumber(evt){
 		evt.preventDefault();
 	}
 }
+
 //validates expiration date
 function validateExp(){
 	var mon = document.getElementById("expmonth").value;
 	var year = document.getElementById("expyear").value;
-	join("/")
-	if(!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(dateString)){
-		return true;
-	}
+	var expo = mon.concat('/', year);
+	var validFormat = false;
+
+	if(/^\d{1,2}\/\d{4}$/.test(expo)){
+		validFormat = true;
+	}else{alert("Please enter year as YYYY. Ex: 2019")}
+
+	if(validFormat){
+		if(year < 2019){
+			alert("Year is expired. Please try different card.")
+			return false;
+		}else if(mon > 12){
+			alert("Card expiration month is invalid.")
+		}else{return true;}
+	}else{return false;}
 }
+
 //validates credit card information
 function validateCC(){
 	var x, brand, frstnum, secnum, num;
@@ -149,7 +164,7 @@ function validateCC(){
 	//verify brand with card number
 	if(brand == "visa"){
 		if(frstnum == 4 && x.length > 13){
-			alert("visa");
+			//alert("visa");
 			return true;
 		}else{
 			alert("The card you input is not a valid visa card");
@@ -157,7 +172,7 @@ function validateCC(){
 		}
 	}else if(brand =="amex"){
 		if(frstnum == 3 && (secnum == 4 || secnum == 7) && x.length == 15){
-			alert("amex card");
+			//alert("amex card");
 			return true;
 		}else{
 			alert("The card you input is not a valid American Express card");
@@ -165,7 +180,7 @@ function validateCC(){
 		}
 	}else if(brand == "mascard"){
 		if(frstnum == 5 && secnum >0 && secnum <5 && x.length == 16){
-			alert("mastercard");
+			//alert("mastercard");
 			return true;
 		}else{
 			alert("The card you input is not a valid Mastercard");
@@ -173,7 +188,7 @@ function validateCC(){
 		}
 	}else if(brand == "discard"){
 		if(frstnum == 6 && (secnum == 0||secnum == 1||secnum == 4||secnum == 5) && x.length == 16){
-			alert("discover");
+			//alert("discover");
 			return true;
 		}else{
 			alert("The card you input is not a valid Discover card");
@@ -181,6 +196,7 @@ function validateCC(){
 		}
 	}else{alert("Please choose a payment type")}
 }
+
 /* function to calculate the sum of 4 numbers*/
 function sumFunction(p1, p2, p3, p4) {
 	parseFloat(p1);parseFloat(p2);parseFloat(p3);parseFloat(p4);
@@ -188,6 +204,7 @@ function sumFunction(p1, p2, p3, p4) {
 	var n = num.toFixed(2);
  	return n;
 }
+
 /* function to calculate tax*/
 function tax(){
 	var num = productsObject.subtotal * .08
@@ -195,6 +212,7 @@ function tax(){
 	document.getElementById("tax").innerHTML = n;
 	return n;
 }
+
 /* function to calculate shipping*/
 function shipping(){
 	var num = productsObject.subtotal * .03;
@@ -202,9 +220,10 @@ function shipping(){
 	document.getElementById("shipping").innerHTML = n;
 	return n;
 }
+
 /*confirmation page for checkout page*/
 function submission() {
-	if(validateCC()){
+	if(validateCC() && validateExp()){
 		var myWindow = window.open("", "", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
 		myWindow.document.write("<h1>Thank you for odering through us! We are working on your order.</h1>");
 		myWindow.document.write("<h2><u>Your Order: </h2></u>");
@@ -254,6 +273,7 @@ var productsObject = {
   	this.subtotal = input;
   }
 }
+
 /*get functions to retrieve information from products object*/
 function getProductOne(){
 	document.write(productsObject.productOne);
@@ -270,6 +290,7 @@ function getPriceTwo(){
 function getSubtotal(){
 	return productsObject.subtotal;
 }
+/********End Checkout Functions***********/
 
 /* Adding items to cart in product page */
 $(document).ready(function addToCart() {
