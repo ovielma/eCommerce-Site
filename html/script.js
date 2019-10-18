@@ -199,10 +199,8 @@ function validateCC(){
 
 /* function to calculate the sum of 4 numbers*/
 function sumFunction(p1, p2, p3, p4) {
-	parseFloat(p1);parseFloat(p2);parseFloat(p3);parseFloat(p4);
-	var num = p1 + p2 + p3 + p4;
-	var n = num.toFixed(2);
- 	return n;
+	var num = (+ parseFloat(p1).toFixed(2))+ (+ parseFloat(p2).toFixed(2)+ (+ parseFloat(p3).toFixed(2))+ (+ parseFloat(p4).toFixed(2)));
+ 	return num;
 }
 
 /* function to calculate tax*/
@@ -244,7 +242,7 @@ function submission() {
 		myWindow.document.write(" City: "+ localStorage.getItem("city") + "<br>"+"<br>");
 		myWindow.document.write(" State:  " + localStorage.getItem("state") + "<br>"+"<br>");
 		myWindow.document.write(" Zip Code: " + localStorage.getItem("zip") + "<br>"+"<br>");
-		myWindow.document.write(" Total Charged: " + sumFunction(getPriceOne(),getPriceTwo(),0,0) + "<br>"+"<br>");
+		myWindow.document.write(" Total Charged: " + sumFunction(getSubtotal(),tax(),shipping(),0) + "<br>"+"<br>");
 		myWindow.document.write(" Your Order Confirmation Number: " + Math.floor(Math.random() * 9999999999999999));
 	}else{
 		alert("credit card information invalid. Please check your information and try again.")
