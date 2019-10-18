@@ -35,33 +35,52 @@
             <div>
               <a href="../index.html" class="continue">Continue Shopping</a>
             </div>
-                  
-            <div> 
-                  <div>
-                    <!-- Product 1 -->
-                    <img src="../images/product_imgs/iphone12_render.jpg" alt="" class="iPhone 12" />
-                    <h3>iPhone12</h3>
-                  
-                     <p> <input type="text"  class="qty" placeholder="1"/> x $1,999.00</p>
-                  </div>  
+            <br>
 
-                  <div>
-                    <!-- Product 1 -->
-                    <img src="../images/product_imgs/snickerspack.jpg" alt="" class="Snickers Variety Pack" />
-                    <h3>Snickers Variety Pack</h3>
-                      
-                    <p> <input type="text"  class="qty" placeholder="1"/> x $5.99</p>
-                    </div> 
-                
-                <form>
-                    <br>
-                    Quantity Price:
-                    <id="qntyAmount">$ Quantity Price Placeholder<br><br>
-                    Total Price:
-                    <id="totalPrice">$ Total Price Placeholder<br><br>
-                    <input type="submit" value="Proceed to Shipping Information" formaction ="ShippingInfo.html"><br><br>
-                </form>
-            </div>
+            <!-- Table to hold products selected by the user along with pricing and costs -->
+            <table>
+                <!-- <thead> wraps the heading row or rows of a table to denote the head -->
+                <thead>
+                    <!-- Table headers -->
+                    <tr>
+                        <!-- Note: by default, the scope attribute may only be used on <th> -->
+                        <th scope="col">Product</th>
+                        <th scope="col">Units</th>
+                        <th scope="col">Unit Price</th>
+                    </tr>
+                </thead>
+                <!-- contains primary data for parent table -->
+                <tbody>
+                    <!-- table rows -->
+                    <tr>
+                        <!-- data cells/columns -->
+                        <td>iPhone 12</td>
+                        <td>1</td>
+                        <td>$1,999.00</td>
+                    </tr>
+                    <tr>
+                        <td>Snickers Variety Pack</td>
+                        <td>1</td>
+                        <td>$5.99</td>
+                    </tr>
+                </tbody>
+                <!-- Column summaries (footers) for the parent table -->
+                <tfoot> 
+                    <tr>
+                        <td>Total</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <!-- End of Table -->
+            <br><br>
+            <!-- Product 1 -->
+            <img src="../images/product_imgs/iphone12_render.jpg" alt="" class="iPhone 12" />
+            <!-- Product 2 -->
+            <img src="../images/product_imgs/snickerspack.jpg" alt="" class="Snickers Variety Pack" />
+            
+            <input type="submit" value="Proceed to Shipping Information" formaction ="ShippingInfo.html"><br><br>
 
     </body>
 
