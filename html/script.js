@@ -294,5 +294,6 @@ function getSubtotal(){
 
 /* Adding items to cart in product page */
 $(document).ready(function addToCart() {
-	document.getElementById("add2Cart").innerHTML = "Your item(s) have been added to your cart!";
+	var qty = document.getElementById("qtyValue");
+	document.getElementById("add2Cart").write = "Your item(s) have been added to your cart!";
 });

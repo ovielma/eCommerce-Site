@@ -38,7 +38,7 @@
             <br>
 
             <!-- Table to hold products selected by the user along with pricing and costs -->
-            <table>
+            <table class="productList">
                 <!-- <thead> wraps the heading row or rows of a table to denote the head -->
                 <thead>
                     <!-- Table headers -->
@@ -54,31 +54,30 @@
                     <!-- table rows -->
                     <tr>
                         <!-- data cells/columns -->
-                        <td>iPhone 12</td>
-                        <td>1</td>
-                        <td>$1,999.00</td>
+                        <td>
+                            <strong class="cart-prods">iPhone 12</strong>
+                        </td>
+                        <td class="cartQty">1</td>
+                        <td class="prodPricing">$1,999.00</td>
                     </tr>
                     <tr>
-                        <td>Snickers Variety Pack</td>
-                        <td>1</td>
-                        <td>$5.99</td>
+                        <td>
+                            <strong class="cart-prods">Snickers Variety Pack</strong>
+                        </td>
+                        <td class="cartQty">1</td>
+                        <td class="prodPricing">$5.99</td>
                     </tr>
                 </tbody>
                 <!-- Column summaries (footers) for the parent table -->
                 <tfoot>
                     <tr>
-                        <td>Total</td>
-                        <td></td>
+                        <td colspan="3">Total</td>
+                        <td>$2,010.98</td>
                         <td></td>
                     </tr>
                 </tfoot>
             </table>
             <!-- End of Table -->
-            <br><br>
-            <!-- Product 1 -->
-            <img src="../images/product_imgs/iphone12_render.jpg" alt="" class="iPhone 12" />
-            <!-- Product 2 -->
-            <img src="../images/product_imgs/snickerspack.jpg" alt="" class="Snickers Variety Pack" />
 
             <input type="submit" value="Proceed to Shipping Information" onclick =location.href="ShippingInfo.html"> <br><br>
 

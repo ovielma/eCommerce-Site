@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <link href="main.css" rel="stylesheet" type="text/css"/>
-        <script type="text/javascript"  src="html/script.js"></script>
+        <script src="html/script.js"></script>
         <title>Home</title>
         <meta charset="UTF-8">
         <!-- This will accommodate different screen sizes and different display devices -->
@@ -39,7 +39,7 @@
             <p class="price">$1,199.99 <br>(will also accept a kidney)</p>
             <p>The fastest, most powerful phone in the world with it's triple lense camera system and sleek design!</p>
             <div class="qty-selector">
-               <select>
+               <select id="qtyValue">
                     <option>Quantity</option>
                     <option href="#">1</option>
                     <option href="#">2</option>
@@ -66,7 +66,7 @@
                     </select>
             </div>
             <p>You're not you when you're hungry, but don't worry, after you eat all 18 in this pack (at once), you will!</p>
-            <p><button id="add2Cart" onclick="addToCart()">Add to Cart</button></p>
+            <button id="add2Cart" onclick="addToCart()">Add to Cart</button>
         </div>
         <!-- End of Product Cards -->
 

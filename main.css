@@ -180,5 +180,15 @@ td {
 tfoot tr:last-child td {
   border-bottom: 0;
 }
+.cart-prods {
+  color: #395870;
+  display: block;
+}
+.cartQty {
+  text-align: center;
+}
+.prodPricing {
+  text-align: right;
+}
 /* Tables styles end */
 
