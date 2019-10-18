@@ -53,7 +53,7 @@
           document.write(getSubtotal())</script><br><br>
           Total Tax:<span id ="tax"></span><br><br>
           Total Shipping Charges: <span id ="shipping"></span><br><br>
-          Total Amount Due:<script>document.write(sumFunction(getPriceOne(),getPriceTwo(),0,0))</script><br><br>
+          Total Amount Due:<script>document.write(sumFunction(getSubtotal(),tax(),shipping(),0))</script><br><br>
           <hr>
         <div class="row">
           <div class="col-75">
