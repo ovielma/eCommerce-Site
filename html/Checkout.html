@@ -11,7 +11,7 @@
       <script type="text/javascript"  src="script.js"></script>
     </head>
 
-    <body id ="checkoutBody">
+    <body onload = "shipping();tax()" id ="checkoutBody">
         <header id="site-header">
             <img src="../images/logo_transparent.png" alt="Tech Junkies Logo">
         </header>
@@ -49,16 +49,11 @@
 
         <form>
           <!--form begins-->
-
-          Total Shopping Amount:
-          <id="totalShippingAmount"><script> productsObject.setSubtotal(sumFunction(getPriceOne(),getPriceTwo(),0,0))
+          Total Shopping Amount:<script> productsObject.setSubtotal(sumFunction(getPriceOne(),getPriceTwo(),0,0))
           document.write(getSubtotal())</script><br><br>
-          Total Tax:
-            <id="totalTax"><script>document.write(tax())</script><br><br>
-          Total Shipping Charges:
-            <id="totalShippingCharges"><script> document.write(shipping())</script><br><br>
-          Total Amount Due:
-            <id="totalAmountDue"><script>document.write(sumFunction(getPriceOne(),getPriceTwo(),0,0))</script><br><br>
+          Total Tax:<span id ="tax"></span><br><br>
+          Total Shipping Charges: <span id ="shipping"></span><br><br>
+          Total Amount Due:<script>document.write(sumFunction(getPriceOne(),getPriceTwo(),0,0))</script><br><br>
           <hr>
         <div class="row">
           <div class="col-75">
@@ -70,12 +65,12 @@
 
                     <i class="fa fa-credit-card" style="font-size:36px;"></i>
 
-                    <select>
+                    <select id = "ccbrand">
                       <option for="fname">Payment Type</option>
-                      <option href="#">Visa</option>
-                      <option href="#">American Express</option>
-                      <option href="#">Mastercard</option>
-                      <option href="#">Discover</option>
+                      <option href="#" value = "visa">Visa</option>
+                      <option href="#" value = "amex">American Express</option>
+                      <option href="#" value = "mascard">Mastercard</option>
+                      <option href="#" value = "discard">Discover</option>
                     </select>
 
                     <div class="icon-container">
@@ -92,17 +87,17 @@
                       </tr>
                       <tr>
                         <label for="ccnum"><td class="labelstyle">Credit card number</label>
-                        <td><input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"></td>
+                        <td><input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"  onkeypress = "isNumber(event)" maxlength="16"></td>
                       </tr>
                       <tr>
                         <label for="expmonth"><td class="labelstyle">Exp Month</label>
-                        <td><input type="text" id="expmonth" name="expmonth" placeholder="September"></td>
+                        <td><input type="text" id="expmonth" name="expmonth" placeholder="MM" onkeypress = "isNumber(event)" maxlength="2"></td>
 
                         <div class="row">
                           <div class="col-50">
                             <td>
                             <label for="expyear"><td class="labelstyle">Exp Year</label>
-                            <td><input type="text" id="expyear" name="expyear" placeholder="2018"></td>
+                            <td><input type="text" id="expyear" name="expyear" placeholder="YYYY" onkeypress = "isNumber(event)" maxlength="4"></td>
                             </td>
                           </div>
                       </tr>
@@ -110,7 +105,7 @@
                         <div class="col-50">
                           <tr>
                           <label for="cvv"><td class="labelstyle">CVV</label>
-                          <td><input type="text" id="cvv" name="cvv" placeholder="352"></td>
+                          <td><input type="text" id="cvv" name="cvv" placeholder="352" onkeypress = "isNumber(event)" maxlength="4"></td>
                           </tr>
                         </div>
                       </div>

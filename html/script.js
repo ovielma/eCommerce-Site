@@ -119,52 +119,117 @@ function shippingSubmitFunction(){
 	document.getElementById("zip").value = shippingZipCode;
 }
 //******************************************/
-/*USER INFORMATION FUNCTIONS END - *Jason */
+/*USER INFORMATION FUNCTIONS END - *Jason */ 
+//validates keypressed is only a number
+function isNumber(evt){
+	var ch = String.fromCharCode(evt.which);
+	if(!(/[0-9]/.test(ch))){
+		evt.preventDefault();
+	}
+}
+//validates expiration date
+function validateExp(){
+	var mon = document.getElementById("expmonth").value;
+	var year = document.getElementById("expyear").value;
+	join("/")
+	if(!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(dateString)){
+		return true;
+	}
+}
+//validates credit card information
+function validateCC(){
+	var x, brand, frstnum, secnum, num;
+	x = document.getElementById("ccnum").value; //get user input
+	brand = document.getElementById("ccbrand").value; //get card type
+	//num = x.split("-"); //elimnate card form 
+	//x = num.join(''); //rejoin to get card number
+	frstnum = x.charAt(0); //get first number in card
+	secnum = x.charAt(1); //get second number in card
 
-
+	//verify brand with card number
+	if(brand == "visa"){
+		if(frstnum == 4 && x.length > 13){
+			alert("visa");
+			return true;
+		}else{
+			alert("The card you input is not a valid visa card");
+			return false
+		}
+	}else if(brand =="amex"){
+		if(frstnum == 3 && (secnum == 4 || secnum == 7) && x.length == 15){
+			alert("amex card");
+			return true;
+		}else{
+			alert("The card you input is not a valid American Express card");
+			return false;
+		}
+	}else if(brand == "mascard"){
+		if(frstnum == 5 && secnum >0 && secnum <5 && x.length == 16){
+			alert("mastercard");
+			return true;
+		}else{
+			alert("The card you input is not a valid Mastercard");
+			return false;
+		}
+	}else if(brand == "discard"){
+		if(frstnum == 6 && (secnum == 0||secnum == 1||secnum == 4||secnum == 5) && x.length == 16){
+			alert("discover");
+			return true;
+		}else{
+			alert("The card you input is not a valid Discover card");
+			return false;
+		}
+	}else{alert("Please choose a payment type")}
+}
 /* function to calculate the sum of 4 numbers*/
 function sumFunction(p1, p2, p3, p4) {
 	parseFloat(p1);parseFloat(p2);parseFloat(p3);parseFloat(p4);
 	var num = p1 + p2 + p3 + p4;
 	var n = num.toFixed(2);
-  return n;
+ 	return n;
 }
 /* function to calculate tax*/
 function tax(){
 	var num = productsObject.subtotal * .08
 	var n = num.toFixed(2);
+	document.getElementById("tax").innerHTML = n;
 	return n;
 }
 /* function to calculate shipping*/
 function shipping(){
 	var num = productsObject.subtotal * .03;
 	var n = num.toFixed(2);
+	document.getElementById("shipping").innerHTML = n;
 	return n;
 }
 /*confirmation page for checkout page*/
 function submission() {
-  var myWindow = window.open("", "", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
-  myWindow.document.write("<h1>Thank you for odering through us! We are working on your order.</h1>");
-  myWindow.document.write("<h2><u>Your Order: </h2></u>");
-  myWindow.document.write(productsObject.productOne);
-  myWindow.document.write("<br>");
-  myWindow.document.write(productsObject.productTwo);
-	myWindow.document.write("<br>");
-	//for starting to write summary submission of store
-//	myWindow.document.write("hello" + localStorage.getItem("uname") + localStorage.getItem("address-1") + localStorage.getItem("address-2")
-	//+localStorage.getItem("city")+localStorage.getItem("state")+
-	//localStorage.getItem("zip"));
-	myWindow.document.write("<h2> <u>Your Contact and Shipping Info:</u> </h2>");
-	myWindow.document.write(" Full Name: " + localStorage.getItem("uname") + "<br>"+"<br>");
-	myWindow.document.write(" Phone Number: " + localStorage.getItem("pNumber") + "<br>"+"<br>");
-	myWindow.document.write(" Email: " + localStorage.getItem("emailUserInfo") + "<br>"+"<br>");
-	myWindow.document.write(" Address 1: " + localStorage.getItem("address-1") + "<br>"+"<br>");
-	myWindow.document.write(" Address 2: " + localStorage.getItem("address-2") + "<br>"+"<br>");
-	myWindow.document.write(" City: "+ localStorage.getItem("city") + "<br>"+"<br>");
-	myWindow.document.write(" State:  " + localStorage.getItem("state") + "<br>"+"<br>");
-	myWindow.document.write(" Zip Code: " + localStorage.getItem("zip") + "<br>"+"<br>");
-	myWindow.document.write(" Total Charged: " + sumFunction(getPriceOne(),getPriceTwo(),0,0) + "<br>"+"<br>");
-	myWindow.document.write(" Your Order Confirmation Number: " + Math.floor(Math.random() * 9999999999999999));
+	if(validateCC()){
+		var myWindow = window.open("", "", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+		myWindow.document.write("<h1>Thank you for odering through us! We are working on your order.</h1>");
+		myWindow.document.write("<h2><u>Your Order: </h2></u>");
+		myWindow.document.write(productsObject.productOne);
+		myWindow.document.write("<br>");
+		myWindow.document.write(productsObject.productTwo);
+		myWindow.document.write("<br>");
+		//for starting to write summary submission of store
+	//	myWindow.document.write("hello" + localStorage.getItem("uname") + localStorage.getItem("address-1") + localStorage.getItem("address-2")
+		//+localStorage.getItem("city")+localStorage.getItem("state")+
+		//localStorage.getItem("zip"));
+		myWindow.document.write("<h2> <u>Your Contact and Shipping Info:</u> </h2>");
+		myWindow.document.write(" Full Name: " + localStorage.getItem("uname") + "<br>"+"<br>");
+		myWindow.document.write(" Phone Number: " + localStorage.getItem("pNumber") + "<br>"+"<br>");
+		myWindow.document.write(" Email: " + localStorage.getItem("emailUserInfo") + "<br>"+"<br>");
+		myWindow.document.write(" Address 1: " + localStorage.getItem("address-1") + "<br>"+"<br>");
+		myWindow.document.write(" Address 2: " + localStorage.getItem("address-2") + "<br>"+"<br>");
+		myWindow.document.write(" City: "+ localStorage.getItem("city") + "<br>"+"<br>");
+		myWindow.document.write(" State:  " + localStorage.getItem("state") + "<br>"+"<br>");
+		myWindow.document.write(" Zip Code: " + localStorage.getItem("zip") + "<br>"+"<br>");
+		myWindow.document.write(" Total Charged: " + sumFunction(getPriceOne(),getPriceTwo(),0,0) + "<br>"+"<br>");
+		myWindow.document.write(" Your Order Confirmation Number: " + Math.floor(Math.random() * 9999999999999999));
+	}else{
+		alert("credit card information invalid. Please check your information and try again.")
+	}
 }
 
 /* object to hold product names, prices, and set functions*/
@@ -196,7 +261,6 @@ function getProductOne(){
 function getPriceOne(){
 	return productsObject.priceOne;
 }
-document.getElementById("priOne").innerHTML = getPriceOne();
 function getProductTwo(){
 	document.write(productsObject.productTwo);
 }
