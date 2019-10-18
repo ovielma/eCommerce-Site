@@ -1,5 +1,4 @@
 
-
 //********************************************/
 /*USER INFORMATION FUNCTIONS START - *Jason */
 
@@ -127,3 +126,8 @@ function getPriceTwo(){
 function getSubtotal(){
 	return productsObject.subtotal;
 }
+
+/* Adding items to cart in product page */
+$(document).ready(function addToCart() {
+	document.getElementById("add2Cart").innerHTML = "Your item(s) have been added to your cart!";
+});

@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <link href="main.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript"  src="html/script.js"></script>
         <title>Home</title>
         <meta charset="UTF-8">
         <!-- This will accommodate different screen sizes and different display devices -->
@@ -47,7 +48,7 @@
                     <option href="#">5</option>
                 </select>
             </div>
-            <p><button>Add to Cart</button></p>
+            <p><button id="add2Cart">Add to Cart</button></p>
         </div>
 
         <div class="products">
@@ -65,7 +66,7 @@
                     </select>
             </div>
             <p>You're not you when you're hungry, but don't worry, after you eat all 18 in this pack (at once), you will!</p>
-            <p><button>Add to Cart</button></p>
+            <p><button id="add2Cart" onclick="addToCart()">Add to Cart</button></p>
         </div>
         <!-- End of Product Cards -->
 

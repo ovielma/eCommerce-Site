@@ -3,6 +3,7 @@
 <html lang="en">
     <head>
         <link href="../main.css" rel="stylesheet" type="text/css"/>
+        <script src="../js/script.js"></script>
         <title>Shopping Cart</title>
         <meta charset="UTF-8">
         <!-- This will accommodate different screen sizes and different display devices -->
@@ -30,9 +31,36 @@
 			</section>
       <body id="shoppingBody">
         <h1>Shopping Cart<i class="fa fa-shopping-cart"style="font-size:36px;"></i></h1>
+
+
         <div>
-            <h3>Your cart is empty</h3>
-            <br>
+                <div class="product-removal">
+                        <button class="remove-product">
+                          Remove
+                        </button>
+                      </div>
+                      <div class="product-line-price">45.99</div>
+                    </div>
+                  
+                    <div class="totals">
+                      <div class="totals-item">
+                        <label>Subtotal</label>
+                        <div class="totals-value" id="cart-subtotal">71.97</div>
+                      </div>
+                      <div class="totals-item">
+                        <label>Tax (5%)</label>
+                        <div class="totals-value" id="cart-tax">3.60</div>
+                      </div>
+                      <div class="totals-item">
+                        <label>Shipping</label>
+                        <div class="totals-value" id="cart-shipping">15.00</div>
+                      </div>
+                      <div class="totals-item totals-item-total">
+                        <label>Grand Total</label>
+                        <div class="totals-value" id="cart-total">90.57</div>
+                      </div>
+                    </div>
+            
             <select>
                 <option>Quantity</option>
                 <option href="#">1</option>
@@ -47,6 +75,7 @@
                 <id="qntyAmount">$ Quantity Price Placeholder<br><br>
                 Total Price:
                 <id="totalPrice">$ Total Price Placeholder<br><br>
+                <input type="submit" value="Proceed to Shipping Information" formaction ="ShippingInfo.html"><br><br>
             </form>
         </div>
     </body>
