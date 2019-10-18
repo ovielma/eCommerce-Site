@@ -9,6 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!--link to use to access icons from fontawsome.com-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript"  src="script.js"></script>
 	</head>
 
 
@@ -41,15 +42,15 @@
 		<!-- radio button to auto fill the form -->
 		<div>
 			<label for="checkbox-one">Yes</label>
-			<input type="checkbox" id="checkbox-one" name="switch-one" value="yes" />
+			<input class="cb" type="checkbox" id="checkbox-one" name="switch-one" value="yes" onChange="cbChange(this)" />
 
 			<label for="checkbox-two">No</label>
-			<input type="checkbox" id="checkbox-two" name="switch-two" value="no" checked/>
+			<input class="cb" type="checkbox" id="checkbox-two" name="switch-two" value="no" onChange="cbChange(this)" checked/>
 		</div>
 
 		<br>
 		<!-- Start of shipping form-->
-		<form>
+		<form action = "Checkout.html">
 
 			<br>
 			<!-- table to format user entries-->
@@ -90,7 +91,7 @@
 			</table><!--end of table of user input-->
 
 			<!--submit button with formaction to go to checkout page-->
-			<input type="submit" value="Go to Checkout" formaction ="Checkout.html" >
+			<input type="submit" value="Go to Checkout" onclick = "shippingSubmitFunction()">
 		</form> <!--end of form-->
 		<br>
 	</body>
