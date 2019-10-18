@@ -26,8 +26,6 @@ class Customer {
 function validatePhoneNumber(){
 	var phoneNumberInfo = document.getElementById("phoneNumberUserInfo").value;
 	var phoneNumberValidation = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/;
-	var emailNameValidate = "last";
-	//var emailNameValidation = /\S+@\S+/;
 	if( (phoneNumberInfo.match(phoneNumberValidation)))
 	{
 		return true;
@@ -40,7 +38,7 @@ function validatePhoneNumber(){
 }
 
 function validateEmailAddress() {
-  var str = document.getElementById("emailUserInfo");
+  var str = document.getElementById("emailUserInfo").value;
   var patt = new RegExp("@");
   var res = patt.test(str);
   if (res == true)
