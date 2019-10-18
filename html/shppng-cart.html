@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
-
         <header id="site-header">
             <img src="../images/logo_transparent.png" alt="Tech Junkies Logo">
         </header>
@@ -28,56 +27,61 @@
             <li><a href="../html/Checkout.html">Checkout</a></li>
 					</ul>
 				</nav>
-			</section>
-      <body id="shoppingBody">
-        <h1>Shopping Cart<i class="fa fa-shopping-cart"style="font-size:36px;"></i></h1>
-
-
-        <div>
-                <div class="product-removal">
-                        <button class="remove-product">
-                          Remove
-                        </button>
-                      </div>
-                      <div class="product-line-price">45.99</div>
-                    </div>
-                  
-                    <div class="totals">
-                      <div class="totals-item">
-                        <label>Subtotal</label>
-                        <div class="totals-value" id="cart-subtotal">71.97</div>
-                      </div>
-                      <div class="totals-item">
-                        <label>Tax (5%)</label>
-                        <div class="totals-value" id="cart-tax">3.60</div>
-                      </div>
-                      <div class="totals-item">
-                        <label>Shipping</label>
-                        <div class="totals-value" id="cart-shipping">15.00</div>
-                      </div>
-                      <div class="totals-item totals-item-total">
-                        <label>Grand Total</label>
-                        <div class="totals-value" id="cart-total">90.57</div>
-                      </div>
-                    </div>
+        </section>
             
-            <select>
-                <option>Quantity</option>
-                <option href="#">1</option>
-                <option href="#">2</option>
-                <option href="#">3</option>
-                <option href="#">4</option>
-                <option href="#">5</option>
-            </select>
-            <form>
-                <br>
-                Quantity Price:
-                <id="qntyAmount">$ Quantity Price Placeholder<br><br>
-                Total Price:
-                <id="totalPrice">$ Total Price Placeholder<br><br>
-                <input type="submit" value="Proceed to Shipping Information" formaction ="ShippingInfo.html"><br><br>
-            </form>
-        </div>
+    <body id="shoppingBody">
+        <h1>My Cart<i class="fa fa-shopping-cart"style="font-size:36px;"></i></h1>
+
+            <div>
+              <a href="../index.html" class="continue">Continue Shopping</a>
+            </div>
+            <br>
+
+            <!-- Table to hold products selected by the user along with pricing and costs -->
+            <table>
+                <!-- <thead> wraps the heading row or rows of a table to denote the head -->
+                <thead>
+                    <!-- Table headers -->
+                    <tr>
+                        <!-- Note: by default, the scope attribute may only be used on <th> -->
+                        <th scope="col">Product</th>
+                        <th scope="col">Units</th>
+                        <th scope="col">Unit Price</th>
+                    </tr>
+                </thead>
+                <!-- contains primary data for parent table -->
+                <tbody>
+                    <!-- table rows -->
+                    <tr>
+                        <!-- data cells/columns -->
+                        <td>iPhone 12</td>
+                        <td>1</td>
+                        <td>$1,999.00</td>
+                    </tr>
+                    <tr>
+                        <td>Snickers Variety Pack</td>
+                        <td>1</td>
+                        <td>$5.99</td>
+                    </tr>
+                </tbody>
+                <!-- Column summaries (footers) for the parent table -->
+                <tfoot> 
+                    <tr>
+                        <td>Total</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <!-- End of Table -->
+            <br><br>
+            <!-- Product 1 -->
+            <img src="../images/product_imgs/iphone12_render.jpg" alt="" class="iPhone 12" />
+            <!-- Product 2 -->
+            <img src="../images/product_imgs/snickerspack.jpg" alt="" class="Snickers Variety Pack" />
+            
+            <input type="submit" value="Proceed to Shipping Information" formaction ="ShippingInfo.html"><br><br>
+
     </body>
 
     <!-- Footer Begins -->
