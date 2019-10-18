@@ -84,7 +84,7 @@ function sameAddress(){
 		document.getElementById("city").value = "";
 		document.getElementById("state").value = "";
 		document.getElementById("zip").value = "";
-		}
+	}
 
 }
 
@@ -102,7 +102,7 @@ function shippingSubmitFunction(){
 	localStorage.setItem("address-1", shippingAddress1.value);
 
 	var shippingAddress2 = document.getElementById("address-2");
-	localStorage.setItem("address-2", shippingtAddress2.value);
+	localStorage.setItem("address-2", shippingAddress2.value);
 
 	var shippingCity = document.getElementById("city");
 	localStorage.setItem("city", shippingCity.value);
@@ -145,13 +145,26 @@ function shipping(){
 function submission() {
   var myWindow = window.open("", "", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
   myWindow.document.write("<h1>Thank you for odering through us! We are working on your order.</h1>");
-  myWindow.document.write("<p>Your Order: </p>");
+  myWindow.document.write("<h2><u>Your Order: </h2></u>");
   myWindow.document.write(productsObject.productOne);
   myWindow.document.write("<br>");
   myWindow.document.write(productsObject.productTwo);
 	myWindow.document.write("<br>");
 	//for starting to write summary submission of store
-	//myWindow.document.write(localStorage.getItem("address-1"));
+//	myWindow.document.write("hello" + localStorage.getItem("uname") + localStorage.getItem("address-1") + localStorage.getItem("address-2")
+	//+localStorage.getItem("city")+localStorage.getItem("state")+
+	//localStorage.getItem("zip"));
+	myWindow.document.write("<h2> <u>Your Contact and Shipping Info:</u> </h2>");
+	myWindow.document.write(" Full Name: " + localStorage.getItem("uname") + "<br>"+"<br>");
+	myWindow.document.write(" Phone Number: " + localStorage.getItem("pNumber") + "<br>"+"<br>");
+	myWindow.document.write(" Email: " + localStorage.getItem("emailUserInfo") + "<br>"+"<br>");
+	myWindow.document.write(" Address 1: " + localStorage.getItem("address-1") + "<br>"+"<br>");
+	myWindow.document.write(" Address 2: " + localStorage.getItem("address-2") + "<br>"+"<br>");
+	myWindow.document.write(" City: "+ localStorage.getItem("city") + "<br>"+"<br>");
+	myWindow.document.write(" State:  " + localStorage.getItem("state") + "<br>"+"<br>");
+	myWindow.document.write(" Zip Code: " + localStorage.getItem("zip") + "<br>"+"<br>");
+	myWindow.document.write(" Total Charged: " + sumFunction(getPriceOne(),getPriceTwo(),0,0) + "<br>"+"<br>");
+	myWindow.document.write(" Your Order Confirmation Number: " + Math.floor(Math.random() * 9999999999999999));
 }
 
 /* object to hold product names, prices, and set functions*/
