@@ -119,7 +119,7 @@ function shippingSubmitFunction(){
 	document.getElementById("zip").value = shippingZipCode;
 }
 //******************************************/
-/*USER INFORMATION FUNCTIONS END - *Jason */ 
+/*USER INFORMATION FUNCTIONS END - *Jason */
 
 /********Start Checkout Functions***********/
 //validates keypressed is only a number
@@ -156,7 +156,7 @@ function validateCC(){
 	var x, brand, frstnum, secnum, num;
 	x = document.getElementById("ccnum").value; //get user input
 	brand = document.getElementById("ccbrand").value; //get card type
-	//num = x.split("-"); //elimnate card form 
+	//num = x.split("-"); //elimnate card form
 	//x = num.join(''); //rejoin to get card number
 	frstnum = x.charAt(0); //get first number in card
 	secnum = x.charAt(1); //get second number in card
@@ -223,7 +223,7 @@ function shipping(){
 function submission() {
 	if(validateCC() && validateExp()){
 		var myWindow = window.open("", "", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
-		myWindow.document.write("<h1>Thank you for odering through us! We are working on your order.</h1>");
+		myWindow.document.write("<h1>Thank you for ordering through us! We are working on your order.</h1>");
 		myWindow.document.write("<h2><u>Your Order: </h2></u>");
 		myWindow.document.write(productsObject.productOne);
 		myWindow.document.write("<br>");
