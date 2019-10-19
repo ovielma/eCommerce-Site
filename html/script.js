@@ -137,15 +137,15 @@ function validateExp(){
 	var expo = mon.concat('/', year);
 	var validFormat = false;
 
-	if(/^\d{1,2}\/\d{4}$/.test(expo)){
+	if(/^\d{1,2}\/\d{4}$/.test(expo)){ //check format is MM/YYYY
 		validFormat = true;
 	}else{alert("Please enter year as YYYY. Ex: 2019")}
 
-	if(validFormat){
-		if(year < 2019){
+	if(validFormat){ 
+		if(year < 2019){ //check to make sure is current or future
 			alert("Year is expired. Please try different card.")
 			return false;
-		}else if(mon > 12){
+		}else if(mon > 12){ //check month is a correct number
 			alert("Card expiration month is invalid.")
 		}else{return true;}
 	}else{return false;}
@@ -156,37 +156,37 @@ function validateCC(){
 	var x, brand, frstnum, secnum, num;
 	x = document.getElementById("ccnum").value; //get user input
 	brand = document.getElementById("ccbrand").value; //get card type
-	//num = x.split("-"); //elimnate card form
-	//x = num.join(''); //rejoin to get card number
 	frstnum = x.charAt(0); //get first number in card
 	secnum = x.charAt(1); //get second number in card
 
 	//verify brand with card number
 	if(brand == "visa"){
-		if(frstnum == 4 && x.length > 13){
-			//alert("visa");
+		if(frstnum == 4 && x.length > 13){ //validate visa card number
 			return true;
 		}else{
 			alert("The card you input is not a valid visa card");
 			return false
 		}
-	}else if(brand =="amex"){
+	}else if(brand =="amex"){ //validate American Express card number
+
 		if(frstnum == 3 && (secnum == 4 || secnum == 7) && x.length == 15){
-			//alert("amex card");
 			return true;
 		}else{
 			alert("The card you input is not a valid American Express card");
 			return false;
 		}
-	}else if(brand == "mascard"){
+
+	}else if(brand == "mascard"){ //validate Mastercard number
+
 		if(frstnum == 5 && secnum >0 && secnum <5 && x.length == 16){
-			//alert("mastercard");
 			return true;
 		}else{
 			alert("The card you input is not a valid Mastercard");
 			return false;
 		}
-	}else if(brand == "discard"){
+
+	}else if(brand == "discard"){ //validate Discover card number
+
 		if(frstnum == 6 && (secnum == 0||secnum == 1||secnum == 4||secnum == 5) && x.length == 16){
 			//alert("discover");
 			return true;
@@ -194,7 +194,8 @@ function validateCC(){
 			alert("The card you input is not a valid Discover card");
 			return false;
 		}
-	}else{alert("Please choose a payment type")}
+
+	}else{alert("Please choose a payment type")} //if user didn't select a card type, display message
 }
 
 /* function to calculate the sum of 4 numbers*/
@@ -203,6 +204,17 @@ function sumFunction(p1, p2, p3, p4) {
  	return num;
 }
 
+/*function to initialize subtotal from prices of items in checkout*/
+function initialize(){
+	productsObject.setSubtotal(sumFunction(getPriceOne(),getPriceTwo(),0,0));
+	getSubtotal();
+}
+
+//function to get total amount after tax and shipping*/
+function total(){
+	var num = sumFunction(getSubtotal(),tax(),shipping(),0);
+	document.getElementById("total").innerHTML = num;
+}
 /* function to calculate tax*/
 function tax(){
 	var num = productsObject.subtotal * .08
@@ -249,7 +261,7 @@ function submission() {
 	}
 }
 
-/* object to hold product names, prices, and set functions*/
+/* object to hold product names, prices, and set functions for the checkout page*/
 var productsObject = {
   productOne:"iPhone 12",
   productTwo: "Snickers",
@@ -271,21 +283,23 @@ var productsObject = {
   	this.subtotal = input;
   }
 }
-
-/*get functions to retrieve information from products object*/
+//Get funtions for getting information from products object//
 function getProductOne(){
-	document.write(productsObject.productOne);
+	document.getElementById("p1").innerHTML = productsObject.productOne;
 }
 function getPriceOne(){
+	document.getElementById("pr1").innerHTML = productsObject.priceOne;
 	return productsObject.priceOne;
 }
 function getProductTwo(){
-	document.write(productsObject.productTwo);
+	document.getElementById("p2").innerHTML = productsObject.productTwo;
 }
 function getPriceTwo(){
+	document.getElementById("pr2").innerHTML = productsObject.priceTwo;
 	return productsObject.priceTwo;
 }
 function getSubtotal(){
+	document.getElementById("subtotal").innerHTML = productsObject.subtotal;
 	return productsObject.subtotal;
 }
 /********End Checkout Functions***********/
