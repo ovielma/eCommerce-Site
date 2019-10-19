@@ -290,8 +290,20 @@ function getSubtotal(){
 }
 /********End Checkout Functions***********/
 
-/* Adding items to cart in product page */
-$(document).ready(function addToCart() {
-	var qty = document.getElementById("qtyValue");
-	document.getElementById("add2Cart").write = "Your item(s) have been added to your cart!";
+
+/********* Cart/Table functions **********/
+
+/* Adding items to cart */
+(function addToCart(name, units, price) {
+	alert("test");
+	console.log("YOU CLICKED ME!");
 });
+
+
+/* Implement a function to remove items from the cart
+$(document).ready(function remove() {
+	var x = document.getElementById("productTable");
+	x.deleteRow(0);
+} */
+
+/********* Cart/Table functions End **********/
