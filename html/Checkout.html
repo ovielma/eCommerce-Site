@@ -11,7 +11,7 @@
       <script type="text/javascript"  src="script.js"></script>
     </head>
 
-    <body onload = "shipping();tax()" id ="checkoutBody">
+    <body onload = "initialize();shipping();tax();getProductOne();getPriceOne();getProductTwo();getPriceTwo();total()" id ="checkoutBody">
         <header id="site-header">
             <img src="../images/logo_transparent.png" alt="Tech Junkies Logo">
         </header>
@@ -38,10 +38,10 @@
                   <i class="fa fa-shopping-cart"style="font-size:36px;"></i>
                 </span>
               </h3>
-              <p><a href="#"><script>getProductOne()</script></a><span class="price"><script>document.write(getPriceOne())</script></span></p>
-              <p><a href="#"><script>getProductTwo()</script></a> <span class="price"><script>document.write(getPriceTwo())</script></span></p>
-              <p><a href="#"><script></script></a><span class="price"><script></script></span></p>
-              <p><a href="#">Product 4</a> <span class="price">$Price Tag Here</span></p>
+              <p><a href="#"><span id ="p1"></a><span class="price"><span id ="pr1"></span></p>
+              <p><a href="#"><span id ="p2"></a><span class="price"><span id ="pr2"></span></p>
+              <p><a href="#"><span id ="p3"></a><span class="price"><span id ="pr3"></span></p>
+              <p><a href="#"><span id ="p4"></a><span class="price"><span id ="pr4"></span></p>
               <hr>
             </div>
           </div>
@@ -49,11 +49,13 @@
 
         <form>
           <!--form begins-->
-          Total Shopping Amount:<script> productsObject.setSubtotal(sumFunction(getPriceOne(),getPriceTwo(),0,0))
-          document.write(getSubtotal())</script><br><br>
+          Total Shopping Amount:<span id ="subtotal"></span><br><br>
+          
           Total Tax:<span id ="tax"></span><br><br>
-          Total Shipping Charges: <span id ="shipping"></span><br><br>
-          Total Amount Due:<script>document.write(sumFunction(getSubtotal(),tax(),shipping(),0))</script><br><br>
+          
+          Total Shipping Charges:<span id ="shipping"></span><br><br>
+          
+          Total Amount Due:<span id ="total"></span><br><br>
           <hr>
         <div class="row">
           <div class="col-75">
