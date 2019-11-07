@@ -34,7 +34,7 @@ function validateEmailAddress() {
 
 function onClickUserInformation(){
 
-	var inputFullName = document.getElementById("uname");
+	/*var inputFullName = document.getElementById("uname");
 	localStorage.setItem("uname", inputFullName.value);
 
 	var inputAddress1 = document.getElementById("a1name");
@@ -56,7 +56,7 @@ function onClickUserInformation(){
 	localStorage.setItem("pNumber", inputPhoneNumber.value);
 
 	var inputEmail= document.getElementById("emailUserInfo");
-	localStorage.setItem("emailUserInfo", inputEmail.value);
+	localStorage.setItem("emailUserInfo", inputEmail.value);*/
 
 	validatePhoneNumber();
 	validateEmailAddress();
@@ -141,7 +141,7 @@ function validateExp(){
 		validFormat = true;
 	}else{alert("Please enter year as YYYY. Ex: 2019")}
 
-	if(validFormat){ 
+	if(validFormat){
 		if(year < 2019){ //check to make sure is current or future
 			alert("Year is expired. Please try different card.")
 			return false;
