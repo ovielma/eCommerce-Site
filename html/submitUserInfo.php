@@ -35,4 +35,18 @@ if (!mysqli_query($con,$sql)){
  
 mysqli_close($con)
 
+//code to pull state information
+
+$sql = "SELECT state_code, state_name FROM states";
+$result = $con->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<br> ". $row["state_code"]. ", ". $row["state_name"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
 ?>
