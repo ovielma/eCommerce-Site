@@ -30,7 +30,7 @@
 				</nav>
 			</section>
 
-	<body id="shippingBody">
+	<body id="shippingBody" onload="loadStates()">
 		<h1>Shipping Information</h1>
 		<h2>
 		<!--shipping icon icon-->
@@ -67,23 +67,11 @@
 					<td class="labelstyle"> City</td>
 					<td><input id = "city" type="text" name="City" placeholder = "Austin" maxlength="100" required="" autocomplete="ship-city"></td>
 				</tr>
+				<!--data for dropdown menu for 'state' input. This is just for show for now until start AJAX part of project.-->
 				<tr>
 					<td class="labelstyle"> State</td>
-					<td><input id = "state" list= "States" name="States" required="" autocomplete="ship-state"></td>
+					<td class="labelstyle" id = "States"> State</td>
 				</tr>
-				<!--data for dropdown menu for 'state' input. This is just for show for now until start AJAX part of project.-->
-				<datalist id="States">
-					<option value="AL"><option value="AK"><option value="AZ"><option value="AR"><option value="CA">
-					<option value="CO"><option value="CT"><option value="DE"><option value="FL"><option value="GA">
-					<option value="HI"><option value="ID"><option value="IL"><option value="IN"><option value="IA">
-					<option value="KS"><option value="KY"><option value="LA"><option value="ME"><option value="MD">
-					<option value="MA"><option value="MI"><option value="MN"><option value="MS"><option value="MO">
-					<option value="MT"><option value="NE"><option value="NV"><option value="NH"><option value="NJ">
-					<option value="NM"><option value="NY"><option value="NC"><option value="ND"><option value="OH">
-					<option value="OK"><option value="OR"><option value="PA"><option value="RI"><option value="SC">
-					<option value="SD"><option value="TN"><option value="TX"><option value="UT"><option value="VT">
-					<option value="VA"><option value="WA"><option value="WV"><option value="WI"><option value="WY">
-				</datalist>
 				<tr>
 					<td class="labelstyle">Postal Code</td>
 					<td><input id ="zip" type="number" name="Zip" placeholder ="73629"maxlength="9" minlength="5" required="" autocomplete="ship-zip"></td>
