@@ -37,6 +37,16 @@
             </div>
             <br>
 
+            <form>
+                <select name="prods" onchange="showProd(this.value)">
+                  <option value="">Select product(s):</option>
+                  <option value="iPhone 12">iPhone 12 ($1,999.99)</option>
+                  <option value="Snickers Variety Pack">Snickers Variety Pack ($5.99)</option>
+                </select>
+            </form>
+            <br>
+            <div id="txtHint"><b>Your cart is empty</b></div><br>
+
             <!-- Table to hold products selected by the user along with pricing and costs -->
             <table class="productTable">
                 <!-- <thead> wraps the heading row or rows of a table to denote the head -->

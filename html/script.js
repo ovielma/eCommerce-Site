@@ -308,10 +308,27 @@ function getSubtotal(){
 /********* Cart/Table functions **********/
 
 /* Adding items to cart */
-(function addToCart(name, units, price) {
-	alert("test");
-	console.log("YOU CLICKED ME!");
-});
+function showProd(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","getprod.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
 
 
 /* Implement a function to remove items from the cart
