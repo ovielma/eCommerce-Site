@@ -47,7 +47,7 @@
           </div>
         </div>
 
-        <form>
+        <form action = "submitPaymentInformation.php" method = "post">
           <!--form begins-->
           Total Shopping Amount:<span id ="subtotal"></span><br><br>
           
@@ -67,7 +67,7 @@
 
                     <i class="fa fa-credit-card" style="font-size:36px;"></i>
 
-                    <select id = "ccbrand">
+                    <select id = "ccbrand" name = "cardType">
                       <option for="fname">Payment Type</option>
                       <option href="#" value = "visa">Visa</option>
                       <option href="#" value = "amex">American Express</option>

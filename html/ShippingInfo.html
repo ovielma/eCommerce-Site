@@ -50,18 +50,18 @@
 
 		<br>
 		<!-- Start of shipping form-->
-		<form action = "Checkout.html">
+		<form action = "submitShippingInfo.php" method="post">
 
 			<br>
 			<!-- table to format user entries-->
 			<table>
 				<tr>
 					<td class="labelstyle">Address 1: Street Address</td>
-					<td><input id = "address-1" type="text" name="Address 1" placeholder = "2322 San Marcos Dr" maxlength="100" required="" autocomplete="ship-address"></td>
+					<td><input id = "address-1" type="text" name="Address_1" placeholder = "2322 San Marcos Dr" maxlength="100" required="" autocomplete="ship-address"></td>
 				</tr>
 				<tr>
 					<td class="labelstyle">Address 2: Apt/Suite #</td>
-					<td><input id = "address-2" type="text" name="Address 2" placeholder = "Apt 194" maxlength="100" autocomplete="ship-address2"></td>
+					<td><input id = "address-2" type="text" name="Address_2" placeholder = "Apt 194" maxlength="100" autocomplete="ship-address2"></td>
 				</tr>
 				<tr>
 					<td class="labelstyle"> City</td>
@@ -91,7 +91,7 @@
 			</table><!--end of table of user input-->
 
 			<!--submit button with formaction to go to checkout page-->
-			<input type="submit" value="Go to Checkout" onclick = "shippingSubmitFunction()">
+			<input type="submit" value="Go to Checkout"  >
 		</form> <!--end of form-->
 		<br>
 	</body>

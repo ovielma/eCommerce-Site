@@ -98,7 +98,7 @@ function cbChange(obj) {
 }
 
 function shippingSubmitFunction(){
-	var shippingAddress1 = document.getElementById("address-1");
+	/*var shippingAddress1 = document.getElementById("address-1");
 	localStorage.setItem("address-1", shippingAddress1.value);
 
 	var shippingAddress2 = document.getElementById("address-2");
@@ -116,7 +116,7 @@ function shippingSubmitFunction(){
 	document.getElementById("address-2").value = shippingAddress2;
 	document.getElementById("city").value = shippingCity;
 	document.getElementById("state").value = shippingState;
-	document.getElementById("zip").value = shippingZipCode;
+	document.getElementById("zip").value = shippingZipCode;*/
 }
 //******************************************/
 /*USER INFORMATION FUNCTIONS END - *Jason */
@@ -325,7 +325,7 @@ function showProd(str) {
                 document.getElementById("txtHint").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","getprod.php?q="+str,true);
+        xmlhttp.open("GET","getprod.php",true);
         xmlhttp.send();
     }
 }
