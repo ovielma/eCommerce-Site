@@ -310,22 +310,29 @@ function getSubtotal(){
 /* Adding items to cart */
 function showProd(str) {
     if (str == "") {
-        document.getElementById("txtHint").innerHTML = "";
+		// check if the input field is empty (str.length == 0)
+		// if it is, clear content of txtEmpttyCart placeholder
+        document.getElementById("txtEmptyCart").innerHTML = "";
         return;
     } else { 
+		// create an XMLHttpRequest object
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
         } else {
             // code for IE6, IE5
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
+		}
+		// Create the function to be executed when the server response is ready
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("txtHint").innerHTML = this.responseText;
+                document.getElementById("txtEmptyCart").innerHTML = this.responseText;
             }
-        };
-        xmlhttp.open("GET","getprod.php",true);
+		};
+		// Send the request off to getprod.php on the server
+		// notice the q parameter is added to the url and str variable holds input field
+		// which will be used in the php file
+        xmlhttp.open("GET","getprod.php?q=" + str,true);
         xmlhttp.send();
     }
 }

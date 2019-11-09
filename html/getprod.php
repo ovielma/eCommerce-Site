@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link href="main.css" rel="stylesheet" type="text/css"/>
-    </head>
-
-    <body>
-    <?php
-    
+ <?php
+    $q = intval($_GET['q']);
     // create a connection
     $con = mysqli_connect("localhost","root","","cs3320");
     // check connection
@@ -34,6 +27,4 @@
     }
     echo "</table>";
     mysqli_close($con);
-    ?>
-    </body>
-</html>
+?>

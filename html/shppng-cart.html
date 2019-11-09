@@ -36,16 +36,16 @@
               <a href="../index.html" class="continue">Continue Shopping</a>
             </div>
             <br>
-
+            <!-- Product Dropdown List -->
             <form>
                 <select name="prods" onchange="showProd(this.value)">
                   <option value="">Select product(s):</option>
-                  <option name = "prodDescrip" value="iPhone 12">iPhone 12 ($1,999.99)</option>
-                  <option value="Snickers Variety Pack">Snickers Variety Pack ($5.99)</option>
+                  <option name="iPhone 12" value="1">iPhone 12 ($1,999.99)</option>
+                  <option name="Snickers Variety Pack" value="2">Snickers Variety Pack ($5.99)</option>
                 </select>
             </form>
             <br>
-            <div id="txtHint"><b>Your cart is empty</b></div><br>
+            <div id="txtEmptyCart"><b>Your cart is empty</b></div><br>
 
             <!-- Table to hold products selected by the user along with pricing and costs -->
             <table class="productTable">
