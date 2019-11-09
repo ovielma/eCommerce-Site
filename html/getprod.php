@@ -6,17 +6,17 @@
 
     <body>
     <?php
-    $q = intval($_GET['q']);
+    
     // create a connection
     $con = mysqli_connect("localhost","root","","cs3320");
     // check connection
     if (!$con) {
         die('Could not connect: ' . mysqli_error($con));
     }
-    else echo "connected!!!<br>";
+    //else echo "connected!!!<br>";
 
     mysqli_select_db($con,"cs3320");
-    $sql="SELECT * FROM Product ID WHERE id = '".$q."'";
+    $sql="SELECT prodDescription, unitPrice FROM Product";
     $result = mysqli_query($con,$sql);
 
     echo "<table>
@@ -27,9 +27,9 @@
     </tr>";
     while($row = mysqli_fetch_array($result)) {
         echo "<tr>";
-        echo "<td>" . $row['Product ID'] . "</td>";
-        echo "<td>" . $row['Description'] . "</td>";
-        echo "<td>" . $row['Unit Price'] . "</td>";
+       // echo "<td>" . $row['productID'] . "</td>";
+        echo "<td>" . $row['prodDescription'] . "</td>";
+        echo "<td>" . $row['unitPrice'] . "</td>";
         echo "</tr>";
     }
     echo "</table>";

@@ -354,6 +354,6 @@ function loadStates() {
             	document.getElementById("States").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","database.php",true);
+        xmlhttp.open("GET","showStates.php",true);
         xmlhttp.send();  
 }
