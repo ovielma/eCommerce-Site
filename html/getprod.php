@@ -9,8 +9,12 @@
     //else echo "connected!!!<br>";
 
     mysqli_select_db($con,"cs3320");
-    $sql="SELECT prodDescription, unitPrice FROM Product";
+    $sql="SELECT * FROM product WHERE ProductID = '".$q."'";
     $result = mysqli_query($con,$sql);
+	if (!$result) {
+    printf("Error: %s\n", mysqli_error($con));
+    exit();
+}
 
     echo "<table>
     <tr>
@@ -20,7 +24,7 @@
     </tr>";
     while($row = mysqli_fetch_array($result)) {
         echo "<tr>";
-       // echo "<td>" . $row['productID'] . "</td>";
+        //echo "<td>" . $row['productID'] . "</td>";
         echo "<td>" . $row['prodDescription'] . "</td>";
         echo "<td>" . $row['unitPrice'] . "</td>";
         echo "</tr>";
