@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="main.css" rel="stylesheet" type="text/css"/>
+        <script src="html/script.js"></script>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <!-- This will accommodate different screen sizes and different display devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--link to use to access icons from fontawsome.com-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <header id="site-header"> 
+            <img src="images/logo_transparent.png" alt="Tech Junkies Logo">
+        </header>
+
+        <form action = "runLogin.php" method="get">
+            <section class = "loginbox">
+                <section class = "labelstyle"> Sign In</section> 
+                <table>
+                    <tr>
+                        <td>Username:</td>
+                        <td><input type = "text" name = "username" required=""></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="text" name = "password" required=""></td>
+                </tr>
+                </table>
+
+                <input type="submit" value="Login">
+            </section>
+        </form> <!--end of form-->
+    </body>
+
+    <!-- Footer Begins -->
+    <footer>
+        <div>
+            <p>Find us on social media</p>
+            <i class="fa fa-facebook-square" style="font-size:24px"></i>
+            <i class="fa fa-instagram" style="font-size:24px"></i>
+            <i class="fa fa-snapchat-square" style="font-size:24px"></i>
+            <i class="fa fa-twitter-square" style="font-size:24px"></i>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+</html>
