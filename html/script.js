@@ -1,6 +1,23 @@
 
 //********************************************/
 /*USER INFORMATION FUNCTIONS START - *Jason */
+function getUserInfoStart(){
+$('#updateBtn').click(function(e){
+    //to disable the click from going to next page
+    e.preventDefault();
+    $.ajax(
+         'autofillUserInfo.php', function(data){
+               //set the value of your input field with the data received
+               $('#serviceTag').val(data);
+         }
+    );
+});
+}
+
+function google() {
+window.location = "shppng-cart.html";
+}
+
 
 function validatePhoneNumber(){
 	var phoneNumberInfo = document.getElementById("pNumber").value;
@@ -233,6 +250,7 @@ function shipping(){
 
 /*confirmation page for checkout page*/
 function submission() {
+	
 	if(validateCC() && validateExp()){
 		var myWindow = window.open("", "", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
 		myWindow.document.write("<h1>Thank you for ordering through us! We are working on your order.</h1>");
