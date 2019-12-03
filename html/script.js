@@ -49,9 +49,14 @@ function validateEmailAddress() {
     }
 }
 
+
 function onClickUserInformation(){
 
-	/*var inputFullName = document.getElementById("uname");
+	
+
+	validatePhoneNumber();
+	validateEmailAddress();
+	var inputFullName = document.getElementById("uname");
 	localStorage.setItem("uname", inputFullName.value);
 
 	var inputAddress1 = document.getElementById("a1name");
@@ -73,10 +78,7 @@ function onClickUserInformation(){
 	localStorage.setItem("pNumber", inputPhoneNumber.value);
 
 	var inputEmail= document.getElementById("emailUserInfo");
-	localStorage.setItem("emailUserInfo", inputEmail.value);*/
-
-	validatePhoneNumber();
-	validateEmailAddress();
+	localStorage.setItem("emailUserInfo", inputEmail.value);
 }
 
 function sameAddress(){
