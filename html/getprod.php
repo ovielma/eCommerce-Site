@@ -14,21 +14,24 @@
 	if (!$result) {
     printf("Error: %s\n", mysqli_error($con));
     exit();
-}
+    }
 
     echo "<table>
     <tr>
     <th>Product ID</th>
     <th>Description</th>
     <th>Unit Price</th>
+    <th>Units</th>
     </tr>";
     while($row = mysqli_fetch_array($result)) {
         echo "<tr>";
-        //echo "<td>" . $row['productID'] . "</td>";
-        echo "<td>" . $row['prodDescription'] . "</td>";
-        echo "<td>" . $row['unitPrice'] . "</td>";
+        echo "<td>" . $row['ProductID'] . "</td>";
+        echo "<td>" . $row['Description'] . "</td>";
+        echo "<td>" . $row['UnitPrice'] . "</td>";
+        echo "<td><input placeholder='0' type='number' name='units' min='1' max='10'></td>";
         echo "</tr>";
-    }
+    }    
     echo "</table>";
+
     mysqli_close($con);
 ?>
